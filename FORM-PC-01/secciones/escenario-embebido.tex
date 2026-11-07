@@ -111,4 +111,31 @@ retroalimentación continua. Esto no significa que las prácticas ágiles
 sean incompatibles con sistemas embebidos.
 
 \subsubsection{Riesgos del modelo elegido y mitigación}
-% Ronda 3 (sábado, hasta 22:30): riesgos concretos y cómo mitigarlos.
+\begin{enumerate}
+  \item \textbf{Requisitos incompletos descubiertos en pruebas finales.}
+  \emph{Mitigación:} revisar escenarios normales y de fallo con operadores,
+  mantenimiento y seguridad antes de aprobar la especificación; usar una
+  matriz de trazabilidad requisito--prueba.
+
+  \item \textbf{Incompatibilidades con sensores, actuadores o tiempos de
+  respuesta.} \emph{Mitigación:} comprobar interfaces y restricciones de
+  hardware mediante ensayos de factibilidad antes de congelar el diseño;
+  repetir pruebas de integración con los equipos disponibles.
+
+  \item \textbf{Fallos con consecuencias para personas o equipos.}
+  \emph{Mitigación:} realizar análisis de peligros, definir estados seguros
+  y criterios verificables, probar condiciones anormales y someter las
+  funciones de protección a revisión especializada. No confiar una
+  parada de emergencia a una solución exclusivamente de software sin la
+  evaluación de seguridad que corresponda.
+
+  \item \textbf{Cambios de alcance durante la construcción.}
+  \emph{Mitigación:} registrar la solicitud, estudiar efectos sobre
+  firmware, electrónica, pruebas, costo y plazo, y aprobar una nueva
+  versión de los requisitos antes de modificar la línea base.
+
+  \item \textbf{Acceso limitado a la planta y retraso de la aceptación.}
+  \emph{Mitigación:} acordar desde el inicio responsables, fechas de
+  revisión, condiciones para acceder a equipos y un entorno de ensayo
+  alternativo cuando sea viable.
+\end{enumerate}
