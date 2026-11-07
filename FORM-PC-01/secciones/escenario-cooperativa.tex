@@ -2,13 +2,89 @@
 \subsection{Plataforma de una cooperativa}
 
 \subsubsection{Caracterización}
-% Ronda 1 (sábado, hasta 12:00): cliente y actores del proceso, estabilidad de los
-% requisitos, criticidad, contrato o regulación y disponibilidad del cliente.
-% Si el docente no dio un dato, escribirlo como supuesto: «Se asume que...».
+
+El enunciado únicamente menciona una plataforma de una cooperativa, sin especificar sus funciones ni condiciones de desarrollo. Para realizar la comparación, se plantea un caso hipotético de una cooperativa de ahorro y crédito. Las características y restricciones descritas son supuestos de trabajo, no datos obtenidos de una organización real.
+
+\paragraph{Descripción de la plataforma}
+
+Se supone que la cooperativa necesita una plataforma web para que sus socios consulten saldos y movimientos, realicen transferencias entre cuentas de la misma institución y presenten solicitudes de crédito. Los empleados podrán revisar las solicitudes y registrar su seguimiento; la aprobación del crédito continuará a cargo del personal autorizado.
+
+La plataforma se conectará con un sistema existente que mantiene las cuentas y registra las operaciones. No sustituirá ese sistema ni calculará directamente los saldos. Quedan fuera del alcance inicial las transferencias a otras instituciones, la aplicación móvil y la aprobación automática de créditos.
+
+\paragraph{Cliente y actores del proceso}
+
+El cliente será la cooperativa, representada por su gerencia. Se consideran los siguientes actores:
+
+\begin{itemize}
+	\item \textbf{Gerencia:} acuerda el alcance, las prioridades y la aceptación del producto.
+	
+	\item \textbf{Responsables de operaciones y crédito:} explican los procedimientos, las reglas del negocio y las excepciones que debe contemplar la plataforma.
+	
+	\item \textbf{Socios:} aportan necesidades de uso y participan en la revisión de consultas, transferencias y solicitudes.
+	
+	\item \textbf{Responsable de tecnología:} proporciona información sobre el sistema existente y sus interfaces.
+	
+	\item \textbf{Responsable de seguridad y cumplimiento:} revisa las necesidades de protección de datos, permisos y registro de operaciones.
+	
+	\item \textbf{Equipo de desarrollo:} obtiene, documenta y analiza los requisitos, identifica conflictos y prepara los incrementos para su validación.
+\end{itemize}
+
+\paragraph{C1. Estabilidad de los requisitos: media}
+
+Se supone que las operaciones principales y las reglas para registrar movimientos ya están definidas en el sistema existente. Sin embargo, los detalles de las pantallas, el seguimiento de solicitudes y las notificaciones necesitan aclararse con empleados y socios. Por ello, existe una base estable, pero parte de los requisitos puede ajustarse durante las revisiones.
+
+\paragraph{C2. Criticidad del sistema: alta}
+
+La plataforma permitirá acceder a información financiera e iniciar transferencias. Una falla podría exponer datos, duplicar una operación o mostrar información incorrecta. Por esta razón, el escenario requiere comprobar los permisos de acceso, la integridad de las operaciones y la correspondencia de lo mostrado con los registros del sistema existente.
+
+\paragraph{C3. Disponibilidad del cliente: media}
+
+Se supone que la cooperativa designará a un representante de operaciones para una reunión semanal y para responder dudas entre reuniones. Los responsables de crédito, seguridad y tecnología participarán en revisiones programadas. Los socios estarán disponibles para sesiones puntuales de validación, pero no para colaborar diariamente.
+
+Esta disponibilidad permite recibir retroalimentación periódica, aunque algunas decisiones tendrán que esperar la intervención del responsable correspondiente.
+
+\paragraph{C4. Tamaño y complejidad: mediano}
+
+Se plantea un equipo de cinco personas para desarrollar una plataforma con tres grupos principales de funciones: consultas, transferencias internas y solicitudes de crédito. Participan usuarios con distintos permisos y existe una integración con el sistema de cuentas.
+
+El alcance se considera mediano por estar limitado a esas funciones. No obstante, la integración y el manejo de operaciones financieras añaden complejidad técnica y requieren pruebas específicas.
+
+\paragraph{C5. Regulación y contrato: alta}
+
+Como supuesto del caso, la cooperativa exigirá revisiones de seguridad y cumplimiento antes de autorizar el uso de funciones que manejen datos u operaciones financieras. Las obligaciones normativas concretas deberán identificarse y verificarse antes de establecer la línea base de requisitos.
+
+También se supone un contrato con presupuesto y fecha de entrega acordados, organizado por entregables. Los cambios que afecten alcance, costo o plazo deberán registrarse y aprobarse. Estas restricciones exigen controlar las modificaciones, aunque permiten revisar los requisitos dentro de los límites acordados.
+
+\paragraph{C6. Documentación exigida: alta}
+
+Se supone que la cooperativa solicitará una especificación de requisitos, reglas de negocio, criterios de aceptación, descripción de interfaces y registros de cambios. También exigirá trazabilidad entre los requisitos y sus pruebas, juntyo con evidencias de validación y aprobación de los entregables.
+
+Esta documentación permitirá comprobar qué se acordó, por qué se modificó y con qué resultados se aceptó cada función.
+
+\begin{table}[H]
+	\centering
+	\footnotesize
+	\caption{Caracterización del escenario hipotético de la cooperativa}
+	\label{tab:escenario-cooperativa}
+	\begin{tabularx}{\textwidth}{@{}Yp{0.22\textwidth}@{}}
+		\toprule
+		\textbf{Criterio} & \textbf{Valoración} \\
+		\midrule
+		C1. Estabilidad de los requisitos & Media \\
+		C2. Criticidad del sistema & Alta \\
+		C3. Disponibilidad del cliente & Media \\
+		C4. Tamaño y complejidad & Mediano \\
+		C5. Regulación y contrato & Alta \\
+		C6. Documentación exigida & Alta \\
+		\bottomrule
+	\end{tabularx}
+\end{table}
+
+Estas valoraciones describen el escenario hipotético. Se utilizarán como base para comparar los modelos en cascada, iterativo y ágil, sin asumir de antemano que alguno es el más adecuado.
 
 \subsubsection{Modelo elegido y justificación}
-% Ronda 2 (sábado, hasta 18:00): modelo elegido con al menos 3 razones
-% del escenario y por qué se descartan los otros dos modelos.
+% Ronda 2: modelo elegido con al menos 3 razones del escenario
+% y por qué se descartan los otros dos modelos.
 
 \subsubsection{Riesgos del modelo elegido y mitigación}
-% Ronda 3 (sábado, hasta 22:30): riesgos concretos y cómo mitigarlos.
+% Ronda 3: riesgos concretos y cómo mitigarlos.
