@@ -7,7 +7,7 @@ Docente: Gleiston Cicerón Guerrero Ulloa, PhD.
 
 ## Integrantes
 
-- Arteaga Alava Danela Dayana (líder)
+- Arteaga Alava Danela Dayana
 - Chavarría Cuenca Tahiny Mel
 - Naranjo Alfonzo Anthony Alexander
 - Nivela Saavedra José Ricardo
