@@ -1,3 +1,51 @@
 % Responsable: José · Ronda 1 (sábado, hasta 12:00)
 % Describir las fases, los supuestos y las condiciones de aplicación del modelo.
 \subsection{Modelo ágil}
+
+El enfoque ágil organiza el desarrollo de software de forma incremental y empírica, con participación continua de las partes interesadas para obtener retroalimentación y ajustar el producto. Según Schön y sus colaboradores, las actividades de ingeniería de requisitos (obtención, documentación, validación, negociación y gestión) no están claramente separadas: se repiten durante las iteraciones y la información se detalla conforme se necesita para el trabajo siguiente \cite{schon2017}.
+
+\subsubsection{Fases y ciclo de trabajo}
+
+En los métodos ágiles las secuencias de fases no son únicas y en este caso se usará la propuesta de Scrum escrita por Schwaber \cite{schwaber1997}:
+
+\begin{enumerate}
+	\item \textbf{Preparación (Pregame):} Incluye planificación de la entrega de los elementos que se conocieron en el backlog con las estimaciones de tiempos y costos.
+	
+	\item \textbf{Desarrollo (Game).} Considerando los requisitos, el tiempo, la calidad, el costo y las condiciones del entorno se desarrollan ciclos iterativos que permiten evolucionar al sistema.
+	
+	\item \textbf{Cierre (Postgame).} Se prepara el producto para su entrega mediante tareas como integración, pruebas del sistema y documentación final.
+\end{enumerate}
+
+En la fase de desarrollo, Schwaber describe cuatro actividades recurrentes dentro del sprint \cite{schwaber1997}:
+
+\begin{itemize}
+	\item \textbf{Desarrollar (Develop):} analizar, diseñar, implementar, probar y documentar los cambios necesarios para atender los requisitos del backlog.
+	
+	\item \textbf{Preparar la versión ejecutable (Wrap):} reunir los cambios en una versión ejecutable que permita mostrar lo implementado.
+	
+	\item \textbf{Revisar (Review):} presentar el trabajo, evaluar el progreso, resolver problemas y revisar riesgos. Pueden identificarse nuevos elementos del backlog.
+	
+	\item \textbf{Ajustar (Adjust):} incorporar al producto la información y los cambios derivados de la revisión.
+\end{itemize}
+
+Esta descripción corresponde a Scrum y se usó como base debido a que Scrum es un marco de trabajo ágil, pero no es una secuencia universal en las metodologías ágiles.
+
+\subsubsection{Supuestos}
+
+Turk, France y Rumpe identifican supuestos que permiten analizar la aplicabilidad de los procesos ágiles. Para esta comparación se consideran los siguientes \cite{turk2014}:
+
+\begin{itemize}
+	\item \textbf{Visibilidad del progreso.} La entrega de software funcional funciona como una ventana para que el cliente analice los avances de manera más limpia sin la necesidad de leer los informes concurrentes, pero esta característica se ve limitada cuando el sistema no muestra su evolución mediante una interfaz gráfica como lo puede ser un sistema embebido.
+	
+	\item \textbf{División del trabajo en iteraciones cortas.} Se supone que el producto puede descomponerse en incrementos pequeños, desarrollables y demostrables en periodos breves; las dependencias fuertes entre subsistemas pueden dificultar esta organización.
+	
+	\item \textbf{Disponibilidad del cliente.} La interacción con el cliente es clave en desarrollo ágil y es necesaria una buena comunicación y disposición entre el equipo y el cliente, pero las responsabilidades habituales del cliente pueden limitar esa disponibilidad y, por consiguiente, retrasar la retroalimentación.
+	
+	\item \textbf{Comunicación directa.} Los autores identifican el supuesto de que la conversación cara a cara es la forma más productiva de comunicación entre clientes y desarrolladores, y entre los propios desarrolladores.
+\end{itemize}
+
+\subsubsection{Condiciones de aplicación}
+
+El enfoque ágil puede funcionar cuando el cliente tiene tiempo para colaborar, las dudas se resuelven oportunamente y el trabajo puede dividirse en incrementos que se puedan evaluar. Esa participación permite aclarar los requisitos y cambiar las prioridades según lo que se aprende durante el desarrollo \cite{schon2017,turk2014}.
+
+Si el cliente tiene poca disponibilidad o hay dependencias técnicas que impiden dividir el trabajo, será necesario adaptar la forma de trabajar. También puede ser más difícil coordinarse cuando el equipo está en distintos lugares. En sistemas sin interfaz humana, el avance puede mostrarse mediante simulaciones, pruebas de aceptación o revisiones, como señalan Turk y sus colaboradores \cite{turk2014}. Estas dificultades deben analizarse en cada escenario antes de decidir si conviene usar un enfoque ágil.
