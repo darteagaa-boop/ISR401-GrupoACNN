@@ -1,0 +1,83 @@
+\documentclass[conference,onecolumn]{IEEEtran}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{csquotes}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+\usepackage[backend=biber,style=ieee,sorting=none]{biblatex}
+\addbibresource{referencias.bib}
+\AtBeginDocument{\spanishplainpercent}
+
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\renewcommand{\IEEEkeywordsname}{Palabras clave}
+
+\title{FORM-PC-01: Comparación de modelos de proceso de requisitos en escenarios reales}
+\author{\IEEEauthorblockN{Arteaga Alava Danela Dayana (líder), Chavarría Cuenca Tahiny Mel,\\
+Naranjo Alfonzo Anthony Alexander, Nivela Saavedra José Ricardo}
+\IEEEauthorblockA{Grupo ACNN · Carrera de Software\\
+Facultad de Ciencias de la Computación\\
+Universidad Técnica Estatal de Quevedo, Ecuador\\
+Ingeniería de Requerimientos -- ISR-401}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+% Responsable: Danela. Se redacta al final, cuando todas las secciones estén completas.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Ingeniería de requisitos, modelos de proceso, cascada, iterativo, ágil, framework de Pohl.
+\end{IEEEkeywords}
+
+\section*{Datos generales}
+
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabularx}{\textwidth}{@{}p{0.22\textwidth}Y@{}}
+\toprule
+\textbf{Campo} & \textbf{Detalle}\\
+\midrule
+Asignatura & Ingeniería de Requerimientos (ISR-401) · 4.\textsuperscript{o} nivel · Paralelo B\\
+Grupo & ACNN\\
+Integrantes & Arteaga Alava Danela Dayana (líder), Chavarría Cuenca Tahiny Mel, Naranjo Alfonzo Anthony Alexander, Nivela Saavedra José Ricardo\\
+Docente & Gleiston Cicerón Guerrero Ulloa, PhD\\
+Fecha de cierre & Sábado 7 de noviembre de 2026, 23:59\\
+Repositorio & \url{https://github.com/darteagaa-boop/ISR401-GrupoACNN}\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Criterios de comparación}
+\input{secciones/criterios}
+
+\section{Caracterización de los modelos de proceso}
+\input{secciones/modelo-cascada}
+\input{secciones/modelo-iterativo}
+\input{secciones/modelo-agil}
+
+\section{Análisis de los escenarios}
+\input{secciones/escenario-gad}
+\input{secciones/escenario-embebido}
+\input{secciones/escenario-app}
+\input{secciones/escenario-cooperativa}
+
+\section{Matriz comparativa escenario por modelo}
+\input{secciones/matriz}
+
+\section{Framework de Pohl aplicado al escenario del GAD}
+\input{secciones/framework-pohl}
+
+\printbibliography[title={Referencias}]
+\end{document}
