@@ -83,8 +83,32 @@ operaciones industriales.
 \end{description}
 
 \subsubsection{Modelo elegido y justificación}
-% Ronda 2 (sábado, hasta 18:00): modelo elegido con al menos 3 razones
-% del escenario y por qué se descartan los otros dos modelos.
+\textbf{Elección propuesta: modelo en cascada con verificaciones técnicas
+tempranas y control de cambios.} La elección solo se mantiene si la
+revisión inicial confirma los supuestos anteriores. Se justifica por:
+\begin{enumerate}
+  \item \textbf{Estabilidad del núcleo de control:} permitiría acordar
+  previamente qué señales se leen, qué acciones se autorizan y cuáles son
+  los límites de operación, disminuyendo cambios tardíos en interfaces.
+  \item \textbf{Criticidad y trazabilidad:} permite establecer requisitos
+  y criterios de prueba identificables, relacionarlos con el diseño y
+  conservar actas y resultados para la aceptación.
+  \item \textbf{Participación del cliente por hitos:} se adapta mejor a
+  revisiones programadas con producción, mantenimiento y seguridad
+  industrial que a la exigencia de decisiones operativas diarias.
+\end{enumerate}
+
+\textbf{Por qué no el iterativo como modelo principal:} sería preferible
+si existieran dudas relevantes sobre sensores, interfaces o respuestas del
+controlador que solo pudieran resolverse mediante prototipos. Bajo los
+supuestos actuales, esa incertidumbre se considera manejable con ensayos
+preliminares, sin redefinir todo el proceso por ciclos.
+
+\textbf{Por qué no el ágil como modelo principal:} las posibles ventanas
+reducidas de acceso a la planta y la necesidad de acordar previamente las
+interfaces y evidencias de aceptación hacen menos conveniente depender de
+retroalimentación continua. Esto no significa que las prácticas ágiles
+sean incompatibles con sistemas embebidos.
 
 \subsubsection{Riesgos del modelo elegido y mitigación}
 % Ronda 3 (sábado, hasta 22:30): riesgos concretos y cómo mitigarlos.
