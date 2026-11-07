@@ -1,3 +1,86 @@
 % Responsable: Tahiny · Ronda 1 (sábado, hasta 12:00)
 % Describir las fases, los supuestos y las condiciones de aplicación del modelo.
 \subsection{Modelo en cascada}
+\label{sec:modelo-cascada}
+
+El modelo en cascada organiza el trabajo en fases sucesivas, con productos
+revisados y aprobados antes de avanzar a la siguiente etapa. En ingeniería
+de requisitos, su característica principal es establecer una especificación
+suficientemente completa y validada antes de usarla como base del diseño y
+la implementación. Esto facilita planificar entregables y conservar la
+trazabilidad, pero también puede hacer costoso descubrir requisitos omitidos
+en etapas tardías \cite{swebok2024,pohl2025}.
+
+\subsection{Fases principales}
+\begin{enumerate}
+  \item \textbf{Delimitación y viabilidad.} Identificar el problema, los
+  objetivos, las partes interesadas, el alcance, las restricciones y los
+  riesgos iniciales. \emph{Resultado:} alcance y plan de trabajo acordados.
+
+  \item \textbf{Obtención y análisis de requisitos.} Recopilar las
+  necesidades de los actores, revisar el funcionamiento del entorno,
+  resolver contradicciones y distinguir requisitos funcionales, de calidad
+  y restricciones. \emph{Resultado:} requisitos analizados y priorizados.
+
+  \item \textbf{Especificación y validación.} Documentar los requisitos
+  con identificadores y criterios de aceptación; comprobar su coherencia,
+  factibilidad, verificabilidad y correspondencia con las necesidades del
+  cliente. Una vez aprobados, forman una \emph{línea base} sometida a
+  control de cambios. \emph{Resultado:} especificación validada
+  \cite{pohl2025,ireb2026}.
+
+  \item \textbf{Diseño de la solución.} Definir arquitectura, módulos,
+  interfaces y decisiones técnicas a partir de la especificación aprobada.
+  \emph{Resultado:} diseños revisados y relacionados con sus requisitos.
+
+  \item \textbf{Implementación e integración.} Construir los componentes e
+  integrarlos respetando las interfaces acordadas. \emph{Resultado:}
+  versión integrada del sistema.
+
+  \item \textbf{Verificación, validación y aceptación.} Ejecutar pruebas
+  de componentes, integración, sistema y aceptación; contrastar los
+  resultados con requisitos y criterios previamente definidos.
+  \emph{Resultado:} evidencias de conformidad y registro de defectos.
+
+  \item \textbf{Despliegue y mantenimiento.} Instalar, operar, corregir
+  defectos y tramitar nuevas necesidades mediante solicitudes de cambio
+  evaluadas por su impacto. \emph{Resultado:} sistema operativo con
+  documentación y versiones controladas.
+\end{enumerate}
+
+Las fases describen una secuencia predominante, no la prohibición absoluta
+de retroceder: una no conformidad puede exigir revisar una fase anterior,
+pero el cambio debe evaluarse y documentarse.
+
+\subsection{Supuestos del modelo}
+Para que esta organización sea razonable, se parte de los siguientes
+supuestos, que deben comprobarse en el proyecto concreto:
+\begin{enumerate}
+  \item Las necesidades fundamentales pueden conocerse y aclararse antes
+  de comprometer el diseño detallado.
+  \item Los requisitos centrales y las interfaces tendrán una estabilidad
+  relativa durante la construcción.
+  \item Los responsables pueden revisar y aprobar entregables en hitos
+  definidos, aunque no participen todos los días.
+  \item Es viable especificar criterios de aceptación y conservar
+  evidencias de cumplimiento para cada requisito relevante.
+  \item Los cambios posteriores se gestionarán mediante un procedimiento
+  explícito de análisis de impacto, aprobación y actualización documental.
+\end{enumerate}
+
+\subsection{Condiciones de aplicación y límites}
+\textbf{Es favorable} cuando el alcance está delimitado, existen interfaces
+técnicas conocidas, hay exigencias de documentación y trazabilidad, las
+revisiones formales son importantes y el cliente puede aprobar una línea
+base antes del desarrollo \cite{swebok2024}.
+
+\textbf{Es poco conveniente como proceso estrictamente secuencial} cuando
+los objetivos cambian con frecuencia, se desconoce la viabilidad técnica,
+se necesita experimentación continua o las personas usuarias solo pueden
+aclarar sus expectativas al probar prototipos. En estos casos, conviene
+considerar un enfoque iterativo o introducir una exploración técnica
+previa a la aprobación de la línea base.
+
+\textbf{Precaución:} la cascada no garantiza por sí misma la seguridad ni
+la calidad. Estas dependen de requisitos verificables, revisión técnica,
+pruebas apropiadas y tratamiento explícito de riesgos.
