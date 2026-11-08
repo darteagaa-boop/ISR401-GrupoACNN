@@ -43,4 +43,29 @@ Se elige el modelo en cascada por las siguientes razones del escenario:
 \textbf{Iterativo:} Se adapta mejor al tamaño del proyecto, porque permite entregar por partes la integración de varios departamentos. Sin embargo, revisar los requisitos en cada iteración choca con un alcance fijado por contrato y con un cliente poco disponible, por lo que obtiene menor total que la cascada en la matriz.
 
 \subsubsection{Riesgos del modelo elegido y mitigación}
-% Ronda 3 (sábado, hasta 22:30): riesgos concretos y cómo mitigarlos.
+Elegir la cascada en el GAD trae riesgos propios del modelo, sobre todo porque los errores en los requisitos se descubren tarde, por eso los principales riesgos y su mitigación son:
+
+{\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}L{0.48\textwidth}L{0.48\textwidth}@{}}
+\caption{Riesgos del modelo en cascada en el GAD y su mitigación}\label{tab:riesgos-gad}\\
+\toprule
+\textbf{Riesgo} & \textbf{Mitigación}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Riesgo} & \textbf{Mitigación}\\
+\midrule
+\endhead
+\midrule
+\multicolumn{2}{r@{}}{\emph{Continúa en la página siguiente}}\\
+\endfoot
+\bottomrule
+\endlastfoot
+\textbf{Requisitos mal entendidos en los términos de referencia que se detectan recién en las pruebas o en la recepción, cuando corregirlos es más costoso.} & Validar la especificación con prototipos de pantallas antes de cerrar la fase de requisitos y firmar un acta de aprobación con el fiscalizador.\\
+\textbf{Cambios en normativas municipales durante el proyecto que obligan a modificar requisitos ya aprobados.} & Definir desde el inicio un procedimiento de control de cambios con análisis de impacto en costo y plazo, ligado a la cláusula de modificación del contrato.\\
+\textbf{Retrasos en la aprobación de entregables por la baja disponibilidad de los funcionarios.} & Acordar al inicio un calendario de revisiones y designar un responsable por departamento con autoridad para aprobar.\\
+\textbf{Poca participación de los ciudadanos, que son los usuarios finales, lo que puede causar baja aceptación del sistema.} & Incluir una encuesta a ciudadanos en la obtención y pruebas de usabilidad con ciudadanos en la fase de pruebas.\\
+\textbf{Integraciones con sistemas existentes del GAD que se descubren tarde y no estaban en la especificación.} & Hacer un inventario de sistemas e interfaces del GAD durante la obtención y validar la integración en la fase de diseño.\\
+\end{longtable}
+}

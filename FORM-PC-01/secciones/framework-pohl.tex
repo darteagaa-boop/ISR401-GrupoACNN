@@ -1,3 +1,27 @@
-% Responsable: Danela · Ronda 3 (sábado, hasta 22:30)
-% Actividades centrales (obtención, documentación, negociación) y transversales
-% (validación, gestión) del framework de Pohl en cada fase del modelo elegido para el GAD.
+% Responsable: Danela · Ronda 3
+El framework de Pohl organiza la ingeniería de requisitos en tres actividades centrales, que son la obtención, la documentación y la negociación, y dos actividades transversales, que son la validación y la gestión \cite{pohl2010}. En el escenario del GAD se eligió el modelo en cascada, por lo que la mayor parte de las actividades centrales se concentra en la primera fase, mientras que las transversales acompañan todo el proyecto para controlar los cambios y demostrar el cumplimiento del contrato. La tabla muestra qué actividades se ejecutan en cada fase y qué artefactos producen.
+
+{\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}L{0.14\textwidth}L{0.36\textwidth}L{0.28\textwidth}L{0.18\textwidth}@{}}
+\caption{Actividades del framework de Pohl en cada fase de la cascada para el GAD}\label{tab:pohl-gad}\\
+\toprule
+\textbf{Fase de la cascada} & \textbf{Actividades centrales} & \textbf{Actividades transversales} & \textbf{Artefactos}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Fase de la cascada} & \textbf{Actividades centrales} & \textbf{Actividades transversales} & \textbf{Artefactos}\\
+\midrule
+\endhead
+\midrule
+\multicolumn{4}{r@{}}{\emph{Continúa en la página siguiente}}\\
+\endfoot
+\bottomrule
+\endlastfoot
+\textbf{1. Requisitos} & \textbf{Obtención:} Entrevistas con el administrador del contrato y los funcionarios de cada departamento, revisión de los términos de referencia y de las ordenanzas sobre trámites. \newline \textbf{Documentación:} Redacción de la especificación de requisitos del sistema. \newline \textbf{Negociación}: Acuerdo sobre prioridades y conflictos entre departamentos, aprobado por las autoridades del GAD. & \textbf{Validación:} Revisión formal de la especificación con el fiscalizador y los funcionarios, apoyada en prototipos de pantallas. \newline \textbf{Gestión:} Línea base de requisitos aprobada y matriz de trazabilidad inicial. & Especificación de requisitos, prototipos de pantallas, acta de aprobación de requisitos, matriz de trazabilidad\\
+\textbf{2. Diseño} & \textbf{Documentación:} Se detallan los requisitos de interfaz con los sistemas existentes del GAD. \newline \textbf{Negociación:} Se resuelven con el GAD los requisitos que no son factibles técnicamente. & \textbf{Validación:} Se comprueba que el diseño cubre cada requisito de la línea base. \newline \textbf{Gestión:} Se actualiza la trazabilidad de requisitos a componentes de diseño. & Documento de diseño, matriz de trazabilidad actualizada\\
+\textbf{3. Implementación} & \textbf{Obtención:} Solo para aclarar dudas puntuales del equipo, sin agregar requisitos nuevos. & \textbf{Gestión:} Control de cambios, toda solicitud nueva se analiza por su impacto y se aprueba mediante una modificación formal del contrato. & Registro de solicitudes de cambio, código fuente\\
+\textbf{4. Pruebas} & \textbf{Documentación:} Casos de prueba derivados de los criterios de aceptación de cada requisito. & \textbf{Validación:} Pruebas de aceptación con funcionarios y ciudadanos para confirmar que el sistema cumple lo que necesitan. \newline \textbf{Gestión:} Se registra qué requisitos quedaron verificados. & Casos de prueba, informe de pruebas, informe de fiscalización\\
+\textbf{5. Entrega y mantenimiento} & \textbf{Obtención y documentación:} Registro de nuevas necesidades para versiones futuras o un nuevo contrato. & \textbf{Validación:} Recepción del sistema con acta de entrega. \newline \textbf{Gestión:} Archivo de la línea base final y de la trazabilidad completa para los organismos de control. & Acta de entrega y recepción, manual de usuario, línea base final\\
+\end{longtable}
+}
