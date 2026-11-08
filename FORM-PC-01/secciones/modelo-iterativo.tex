@@ -1,3 +1,88 @@
-% Responsable: Anthony · Ronda 1 (sábado, hasta 12:00)
-% Describir las fases, los supuestos y las condiciones de aplicación del modelo.
+% Responsable: Naranjo Alfonzo Anthony Alexander
+% FORM-PC-01 · Ronda 1: caracterización del modelo iterativo.
 \subsection{Modelo iterativo}
+\label{sec:modelo-iterativo}
+
+El modelo iterativo plantea que los requisitos no tienen que quedar completamente
+resueltos en un único intento. Se comienza con una comprensión inicial del
+problema y se realizan ciclos de obtención, documentación, negociación y
+validación para corregir ambigüedades y ampliar la especificación. Cada ciclo
+aprovecha lo aprendido en el anterior; por eso es útil cuando existen
+necesidades conocidas, pero todavía quedan detalles por aclarar
+\cite{sommerville2016,pohl2025}.
+
+A diferencia de una secuencia estrictamente lineal, una observación del cliente
+puede llevar a revisar requisitos ya documentados. El producto de cada ciclo
+puede ser una versión mejorada de la Especificación de Requisitos de Software
+(ERS), un prototipo evaluado o un conjunto de requisitos acordados. Iterar
+sobre requisitos no obliga, por sí solo, a entregar software funcionando en
+cada ciclo; esa decisión depende de cómo se organice el desarrollo.
+
+\subsubsection{Fases principales}
+
+\begin{enumerate}
+  \item \textbf{Comprensión inicial y delimitación.} Identificar el problema,
+  los objetivos, los actores, las restricciones y los requisitos conocidos.
+  También se seleccionan los aspectos con mayor incertidumbre.
+  \emph{Resultado:} alcance preliminar y primera versión de requisitos.
+
+  \item \textbf{Planificación de la iteración.} Elegir qué funcionalidades,
+  dudas o riesgos se analizarán en el ciclo y acordar quiénes revisarán los
+  resultados. \emph{Resultado:} objetivos y criterios de revisión del ciclo.
+
+  \item \textbf{Obtención y documentación.} Realizar entrevistas,
+  observaciones o revisión de prototipos para precisar necesidades; actualizar
+  requisitos funcionales, de calidad y restricciones, identificando sus
+  fuentes. \emph{Resultado:} ERS o modelos revisados.
+
+  \item \textbf{Negociación y validación.} Contrastar los requisitos con
+  las partes interesadas, resolver contradicciones, comprobar que sean claros
+  y verificables, y registrar los acuerdos. \emph{Resultado:} requisitos
+  aceptados y observaciones pendientes \cite{ireb2026,pohl2025}.
+
+  \item \textbf{Evaluación y siguiente ciclo.} Revisar las observaciones,
+  controlar las versiones, actualizar las prioridades y decidir si se
+  necesita otra iteración o si ya existe una especificación suficiente para
+  continuar. \emph{Resultado:} nueva línea base o cierre documentado.
+\end{enumerate}
+
+La validación y la gestión de cambios acompañan a todo el proceso, no se
+reservan únicamente para el último paso. Esto mantiene la trazabilidad entre
+las necesidades del cliente, las versiones de los requisitos y las decisiones
+tomadas \cite{pohl2025}.
+
+\subsubsection{Supuestos del modelo}
+
+\begin{itemize}
+  \item Existen partes interesadas disponibles para revisar los resultados
+  en momentos acordados y dar respuestas a las dudas importantes.
+  \item Los requisitos pueden precisarse progresivamente sin que el costo de
+  cada corrección haga inviable el proyecto.
+  \item Es posible dividir el problema en conjuntos de requisitos o asuntos
+  prioritarios que puedan analizarse y validarse por ciclos.
+  \item El equipo dispone de mecanismos para registrar versiones, decisiones,
+  dependencias y solicitudes de cambio, evitando perder acuerdos anteriores.
+  \item Se puede reservar tiempo para la retroalimentación y el retrabajo
+  que surjan al descubrir necesidades no previstas.
+\end{itemize}
+
+\subsubsection{Condiciones de aplicación y límites}
+
+\textbf{Es conveniente} cuando el alcance general se conoce, pero aún hay
+incertidumbre sobre pantallas, procesos, reglas de negocio o integración con
+otros sistemas. También ayuda cuando los usuarios pueden revisar prototipos o
+versiones intermedias y es necesario conservar una especificación formal que
+mejore en cada ciclo \cite{sommerville2016}.
+
+\textbf{Es menos conveniente} si no existe ningún representante capaz de
+validar avances, si las decisiones dependen de autorizaciones demasiado
+lentas o si el proyecto no dispone de tiempo para revisar el trabajo. En
+sistemas con interfaces críticas o restricciones contractuales, las
+iteraciones deben mantener controles de trazabilidad, aceptación y análisis
+de impacto; repetir ciclos no elimina esas obligaciones.
+
+\textbf{Diferencia frente al enfoque ágil.} Ambos aceptan revisiones, pero
+el iterativo puede centrarse en refinar la ERS y validar prototipos mediante
+ciclos planificados. En el enfoque ágil, la elaboración de requisitos suele
+integrarse de forma continua con la construcción y las pruebas de incrementos
+pequeños del producto \cite{schon2017}.
