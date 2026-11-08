@@ -105,4 +105,17 @@ La matriz de la Tabla~\ref{tab:matriz-cooperativa} respalda esta elección con 1
 \textbf{Ágil.} También permite revisar requisitos y entregar incrementos, por lo que responde bien a la estabilidad media y al tamaño del proyecto. Se considera menos conveniente en las condiciones asumidas porque socios y especialistas no estarán disponibles de forma continua y deben coordinarse aprobaciones documentales y contractuales. El enfoque ágil puede incorporar esos controles; su descarte no se basa en que carezca de documentación, sino en que la propuesta iterativa planificada se ajusta mejor a la participación programada y a los entregables formales del caso \cite{schon2017,turk2014}.
 
 \subsubsection{Riesgos del modelo elegido y mitigación}
-% Ronda 3: riesgos concretos y cómo mitigarlos.
+
+Los siguientes riesgos se plantean a partir de los supuestos de la cooperativa y de la propuesta de desarrollar la plataforma mediante ciclos e incrementos. No representan problemas observados en una organización real.
+
+\begin{enumerate}
+    \item \textbf{Retraso de las revisiones.} Si operaciones, crédito o seguridad no revisan un incremento a tiempo, el siguiente ciclo podría comenzar con requisitos pendientes y generar retrabajo. \textbf{Mitigación:} acordar las fechas de revisión al inicio de cada ciclo, enviar previamente los puntos por resolver y registrar las decisiones. No iniciar funciones que dependan de una aprobación pendiente; continuar con tareas que ya tengan requisitos acordados.
+
+    \item \textbf{Crecimiento del alcance entre ciclos.} Las revisiones de pantallas y solicitudes pueden generar nuevas funciones que superen el presupuesto y la fecha pactados. \textbf{Mitigación:} distinguir las aclaraciones de los requisitos de las nuevas solicitudes, estimar su impacto y obtener aprobación antes de incorporarlas. Mantener fuera del alcance inicial las transferencias externas, la aplicación móvil y la aprobación automática de créditos, salvo cambio contractual autorizado.
+
+    \item \textbf{Errores de integración y regresión.} Un incremento de transferencias podría alterar las consultas ya validadas o registrar una operación de forma duplicada al comunicarse con el sistema de cuentas. \textbf{Mitigación:} comprobar la interfaz desde el primer incremento en un entorno de pruebas y repetir las pruebas de las funciones anteriores en cada ciclo. Incluir casos de interrupción, reintento y respuesta fallida; verificar que un reintento no duplique la operación y que saldos y movimientos coincidan con el sistema existente.
+
+    \item \textbf{Controles de seguridad incompletos en entregas parciales.} Al priorizar funciones visibles, el equipo podría posponer permisos o registros necesarios para proteger las consultas y transferencias. \textbf{Mitigación:} incluir requisitos y criterios de aceptación de acceso y registro de operaciones desde el primer ciclo. El responsable de seguridad deberá revisar las evidencias antes de autorizar cada entrega. Una versión mostrada para recibir comentarios no se considerará automáticamente aprobada para operar con datos o dinero reales.
+
+    \item \textbf{Documentación desactualizada.} Los ajustes de cada iteración pueden dejar diferencias entre lo implementado, los requisitos aprobados y las pruebas, dificultando la aceptación del entregable. \textbf{Mitigación:} actualizar la especificación, las interfaces, la trazabilidad y los resultados de pruebas dentro del mismo ciclo. Comprobar su correspondencia con la versión entregada y registrar la aprobación antes de cerrar el incremento.
+\end{enumerate}
