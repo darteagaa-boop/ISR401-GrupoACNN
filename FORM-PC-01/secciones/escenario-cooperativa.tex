@@ -57,7 +57,7 @@ También se supone un contrato con presupuesto y fecha de entrega acordados, org
 
 \paragraph{C6. Documentación exigida: alta}
 
-Se supone que la cooperativa solicitará una especificación de requisitos, reglas de negocio, criterios de aceptación, descripción de interfaces y registros de cambios. También exigirá trazabilidad entre los requisitos y sus pruebas, juntyo con evidencias de validación y aprobación de los entregables.
+Se supone que la cooperativa solicitará una especificación de requisitos, reglas de negocio, criterios de aceptación, descripción de interfaces y registros de cambios. También exigirá trazabilidad entre los requisitos y sus pruebas, junto con evidencias de validación y aprobación de los entregables.
 
 Esta documentación permitirá comprobar qué se acordó, por qué se modificó y con qué resultados se aceptó cada función.
 
@@ -83,8 +83,26 @@ Esta documentación permitirá comprobar qué se acordó, por qué se modificó 
 Estas valoraciones describen el escenario hipotético. Se utilizarán como base para comparar los modelos en cascada, iterativo y ágil, sin asumir de antemano que alguno es el más adecuado.
 
 \subsubsection{Modelo elegido y justificación}
-% Ronda 2: modelo elegido con al menos 3 razones del escenario
-% y por qué se descartan los otros dos modelos.
+
+\textbf{Modelo elegido: iterativo con desarrollo incremental y revisiones documentadas.}
+
+Se propone construir versiones sucesivas, revisar los requisitos con la cooperativa y ampliar las funciones de forma controlada. Se distingue entre iterar, que permite revisar y mejorar lo trabajado, e incrementar, que añade funcionalidad. Ambas prácticas se combinan en la propuesta para este caso \cite{sommerville2016}.
+
+La elección se apoya en las siguientes razones del escenario:
+\begin{enumerate}
+    \item \textbf{Hay requisitos que todavía necesitan aclararse.} Las operaciones principales tienen una base definida, pero las pantallas, las notificaciones y el seguimiento de solicitudes pueden cambiar tras las revisiones. Los ciclos permiten precisar esos detalles antes de extenderlos a toda la plataforma.
+    \item \textbf{La integración puede comprobarse progresivamente.} Se plantea comenzar con consultas de saldos y movimientos para revisar la conexión con el sistema existente, los permisos y la correspondencia de los datos. Después se incorporarían las transferencias internas y las solicitudes de crédito. Cada incremento necesitará pruebas y aprobación antes de ponerse en operación.
+    \item \textbf{La disponibilidad del cliente permite revisiones programadas.} La reunión semanal con operaciones puede utilizarse para aclarar dudas y revisar avances. Las decisiones de crédito, tecnología y seguridad se agendarán antes del cierre de cada ciclo. Se supone que estos responsables pueden cumplir esos compromisos; si no ocurre, deberá revisarse la planificación.
+    \item \textbf{La documentación puede mantenerse por incremento.} Antes de aceptar cada entrega se actualizarán los requisitos, las interfaces, los criterios de aceptación, la trazabilidad y los resultados de pruebas. Los cambios con impacto en alcance, costo o plazo se someterán a la aprobación prevista en el contrato supuesto.
+\end{enumerate}
+
+La matriz de la Tabla~\ref{tab:matriz-cooperativa} respalda esta elección con 17 puntos. La ventaja sobre cascada es reducida y depende principalmente de poder aclarar requisitos e integrar el sistema de cuentas por partes sin abandonar las revisiones formales.
+
+\textbf{Alternativas descartadas para este escenario:}
+
+\textbf{Cascada.} Es una alternativa viable por el control de cambios, la documentación y las aprobaciones que exige la cooperativa. No se elige como organización principal porque todavía quedan requisitos de uso por precisar y conviene comprobar pronto la integración con el sistema existente. Esperar a una etapa posterior para validar estos aspectos aumentaría el retrabajo. Su valoración de 16 puntos muestra que sigue siendo una opción cercana, especialmente si se aclararan los requisitos pendientes antes de construir.
+
+\textbf{Ágil.} También permite revisar requisitos y entregar incrementos, por lo que responde bien a la estabilidad media y al tamaño del proyecto. Se considera menos conveniente en las condiciones asumidas porque socios y especialistas no estarán disponibles de forma continua y deben coordinarse aprobaciones documentales y contractuales. El enfoque ágil puede incorporar esos controles; su descarte no se basa en que carezca de documentación, sino en que la propuesta iterativa planificada se ajusta mejor a la participación programada y a los entregables formales del caso \cite{schon2017,turk2014}.
 
 \subsubsection{Riesgos del modelo elegido y mitigación}
 % Ronda 3: riesgos concretos y cómo mitigarlos.
