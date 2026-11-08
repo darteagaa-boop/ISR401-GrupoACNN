@@ -1,14 +1,167 @@
-% Responsable: Anthony
+% Responsable: Naranjo Alfonzo Anthony Alexander
+% FORM-PC-01 · Rondas 1, 2 y 3: escenario, elección y riesgos.
 \subsection{Aplicación móvil de un emprendimiento}
+\label{sec:escenario-app}
 
 \subsubsection{Caracterización}
-% Ronda 1 (sábado, hasta 12:00): cliente y actores del proceso, estabilidad de los
-% requisitos, criticidad, contrato o regulación y disponibilidad del cliente.
-% Si el docente no dio un dato, escribirlo como supuesto: «Se asume que...».
+
+El enunciado únicamente indica una aplicación móvil de un emprendimiento,
+sin precisar qué vende, su presupuesto o las condiciones de desarrollo.
+Por ello, se plantea un \textbf{escenario hipotético}: un pequeño
+emprendimiento de productos artesanales quiere ofrecer su catálogo y recibir
+pedidos desde una aplicación móvil. Los datos siguientes son supuestos de
+análisis, no resultados de entrevistas con un negocio real.
+
+\paragraph{Descripción y alcance}
+Se asume que la aplicación permitirá a los clientes consultar productos,
+ver precios y disponibilidad, preparar una solicitud de pedido y conocer su
+estado. El propietario podrá actualizar el catálogo y confirmar o rechazar
+pedidos. En la primera versión, el pago y la entrega se coordinarán fuera de
+la aplicación. No se incluirán pasarela de pagos, facturación electrónica,
+servicio propio de reparto ni integración con sistemas empresariales.
+
+\paragraph{Cliente y actores del proceso}
+El cliente es la persona propietaria del emprendimiento, quien establece las
+prioridades y acepta las funcionalidades. Los compradores son usuarios
+principales y ayudan a evaluar la facilidad de uso. Se asume que una persona
+encargada de atender pedidos participa en la definición del flujo de
+confirmación; en un negocio pequeño puede ser la misma propietaria. El
+equipo de desarrollo obtiene, documenta, negocia y valida los requisitos.
+
+\paragraph{C1. Estabilidad de los requisitos: baja}
+Aunque el objetivo de mostrar productos y recibir pedidos está claro, se
+supone que la organización del catálogo, el proceso de compra, las
+notificaciones y la presentación de las pantallas cambiarán después de que
+el propietario y los clientes prueben las primeras versiones.
+
+\paragraph{C2. Criticidad del sistema: baja}
+Una falla podría provocar pedidos perdidos, molestias a los clientes o una
+venta no concretada, pero el escenario no incluye control de equipos
+peligrosos ni procesamiento de pagos dentro de la aplicación. La valoración
+baja no elimina la necesidad de proteger los datos de contacto y verificar
+que cada pedido quede registrado correctamente.
+
+\paragraph{C3. Disponibilidad del cliente: alta}
+Se asume que la persona propietaria puede responder consultas por mensajería
+durante la semana y revisar una demostración breve al cerrar cada ciclo. Se
+programarán sesiones puntuales con compradores para recibir opiniones sobre
+el catálogo y la solicitud de pedidos.
+
+\paragraph{C4. Tamaño y complejidad: pequeño}
+El alcance inicial se limita al catálogo, los pedidos, su estado y la
+gestión básica por parte del propietario. Participan pocos tipos de usuario
+y no se contemplan integraciones externas complejas. Se supone un equipo de
+desarrollo reducido.
+
+\paragraph{C5. Regulación y contrato: baja}
+Se asume que el proyecto no depende de una contratación pública ni de un
+contrato que congele todas las funciones desde el inicio. Las prioridades
+podrán acordarse directamente con la persona propietaria. Esto no significa
+que no existan obligaciones legales: antes de operar habrá que revisar las
+que correspondan al tratamiento de datos personales y a la actividad
+comercial del emprendimiento.
+
+\paragraph{C6. Documentación exigida: baja}
+Se considera suficiente mantener historias de usuario, criterios de
+aceptación, un registro de decisiones, evidencias básicas de prueba y una
+guía de uso. No se supone una auditoría contractual que requiera informes
+extensos para aceptar cada función.
+
+\begin{table}[H]
+\centering\footnotesize
+\caption{Caracterización del escenario hipotético de la aplicación móvil}
+\label{tab:caracterizacion-app}
+\begin{tabularx}{\textwidth}{@{}Yp{0.20\textwidth}@{}}
+\toprule
+\textbf{Criterio} & \textbf{Valoración}\\
+\midrule
+C1. Estabilidad de los requisitos & Baja\\
+C2. Criticidad del sistema & Baja\\
+C3. Disponibilidad del cliente & Alta\\
+C4. Tamaño y complejidad & Pequeño\\
+C5. Regulación y contrato & Baja\\
+C6. Documentación exigida & Baja\\
+\bottomrule
+\end{tabularx}
+\end{table}
 
 \subsubsection{Modelo elegido y justificación}
-% Ronda 2 (sábado, hasta 18:00): modelo elegido con al menos 3 razones
-% del escenario y por qué se descartan los otros dos modelos.
+
+\textbf{Modelo elegido: ágil, con entregas incrementales y revisiones
+frecuentes.} La matriz de la Tabla~\ref{tab:matriz-app} le asigna 18 puntos,
+frente a 14 del iterativo y 9 de cascada. La selección depende de que se
+cumpla la disponibilidad del propietario planteada como supuesto.
+
+\begin{enumerate}
+  \item \textbf{Requisitos cambiantes:} las pantallas y el recorrido para
+  hacer pedidos pueden ajustarse cuando los compradores usen prototipos o
+  versiones iniciales. El enfoque ágil permite revisar y priorizar esas
+  necesidades continuamente \cite{schon2017}.
+
+  \item \textbf{Participación del propietario:} las revisiones breves y las
+  respuestas frecuentes permiten decidir rápidamente qué mejorar o qué
+  función tiene más valor para el negocio.
+
+  \item \textbf{Alcance pequeño y divisible:} se puede comenzar mostrando
+  un catálogo funcional, añadir la solicitud de pedidos y luego incorporar
+  la consulta de estados. Cada entrega permite observar problemas reales
+  sin esperar a terminar toda la aplicación.
+
+  \item \textbf{Pocas restricciones contractuales y documentales:} el
+  emprendimiento puede reajustar prioridades sin tramitar modificaciones
+  formales extensas, manteniendo de todas maneras criterios de aceptación,
+  pruebas y registro de cambios.
+\end{enumerate}
+
+\textbf{Por qué no cascada como modelo principal.} Aunque facilitaría
+establecer de antemano una especificación y un plan, exigiría decidir desde
+el inicio detalles de experiencia de usuario que todavía no se conocen. Si
+las pruebas con clientes muestran que el flujo de pedidos es confuso,
+corregirlo tardíamente podría causar retrabajo.
+
+\textbf{Por qué no el iterativo como modelo principal.} También es una
+alternativa válida, ya que permite refinar requisitos y evaluar prototipos.
+Sin embargo, bajo los supuestos de alta disponibilidad del propietario y
+funciones pequeñas que pueden ponerse a prueba, resulta más conveniente
+integrar las revisiones de requisitos con la construcción y entrega
+frecuente de funcionalidades. El iterativo sería una opción más fuerte si
+las revisiones solo pudieran efectuarse en hitos separados o se exigiera
+una ERS formal actualizada en cada ciclo \cite{sommerville2016,schon2017}.
 
 \subsubsection{Riesgos del modelo elegido y mitigación}
-% Ronda 3 (sábado, hasta 22:30): riesgos concretos y cómo mitigarlos.
+
+Los riesgos siguientes corresponden al escenario supuesto; no son problemas
+comprobados en un emprendimiento real.
+
+\begin{enumerate}
+  \item \textbf{Crecimiento continuo del alcance.} El propietario podría
+  solicitar pagos en línea, reparto propio u otras funciones fuera del
+  objetivo inicial. \emph{Mitigación:} mantener una lista priorizada de
+  historias de usuario, separar el alcance inicial de las mejoras futuras
+  y revisar el costo y el tiempo antes de aceptar cambios relevantes.
+
+  \item \textbf{Requisitos confusos o decisiones contradictorias.}
+  Al recibir comentarios frecuentes, el equipo podría modificar pantallas
+  sin criterios claros. \emph{Mitigación:} definir criterios de aceptación
+  para cada historia, registrar decisiones y validar el flujo de pedido con
+  el propietario antes de cerrar una entrega.
+
+  \item \textbf{Pérdida de disponibilidad del cliente.} Aunque se supone
+  alta participación, las actividades diarias del negocio pueden impedir
+  revisar una versión. \emph{Mitigación:} acordar de antemano reuniones
+  breves, nombrar a quien pueda responder dudas y no dar por aprobada una
+  función que depende de una decisión pendiente.
+
+  \item \textbf{Errores introducidos al agregar funciones.} Una nueva
+  pantalla o actualización podría afectar la creación y el seguimiento de
+  pedidos. \emph{Mitigación:} realizar pruebas del flujo completo de pedido
+  en cada entrega, comprobar el registro de estados y probar la aplicación
+  en dispositivos de distintas características.
+
+  \item \textbf{Protección de datos y documentación descuidadas.} La
+  rapidez de las entregas podría llevar a almacenar más información de la
+  necesaria o a omitir registros de cambios. \emph{Mitigación:} recoger
+  solo datos indispensables, establecer permisos de acceso, verificar
+  requisitos de privacidad y mantener historias, decisiones y resultados
+  de prueba vinculados a cada versión.
+\end{enumerate}
