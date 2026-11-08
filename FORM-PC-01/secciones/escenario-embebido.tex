@@ -38,30 +38,30 @@ del desarrollo, debido a la criticidad de las
 operaciones industriales.
 
 \subsubsection{Caracterización}
-\subsection{Cliente, actores y características del proyecto}
-\begin{description}
-  \item[Cliente y objetivo.] Se asume que el cliente es la administración
+\textbf{Cliente, actores y características del proyecto}
+\begin{itemize}
+  \item \textbf{Cliente y objetivo.} Se asume que el cliente es la administración
   de la planta y que busca supervisar la operación de una línea productiva,
   reducir fallos de operación y registrar estados de los equipos.
 
-  \item[Actores.] Se asume la participación de una jefatura de producción
+  \item \textbf{Actores.} Se asume la participación de una jefatura de producción
   (acepta objetivos operativos), operadores (usan las señales y alarmas),
   personal de mantenimiento (diagnostica fallos), especialistas en
   automatización (integran sensores y actuadores) y responsables de
   seguridad industrial (revisan peligros y medidas de protección).
 
-  \item[Estabilidad de requisitos.] \textbf{Alta en el núcleo, bajo
+  \item \textbf{Estabilidad de requisitos.} \textbf{Alta en el núcleo, bajo
   supuesto:} se presume que la función de control y las interfaces físicas
   pueden definirse antes de construir. Los ajustes de parámetros o la
   presentación de alarmas podrían cambiar y requieren gestión de cambios.
 
-  \item[Criticidad.] \textbf{Alta, bajo supuesto:} una orden incorrecta a
+  \item \textbf{Criticidad.} \textbf{Alta, bajo supuesto:} una orden incorrecta a
   un actuador o una lectura defectuosa podría afectar la continuidad del
   proceso, provocar daños en equipos o generar peligros. Esta valoración
   exige revisar y probar los comportamientos ante fallos; no presupone
   que todo el software cumpla una función de seguridad certificada.
 
-  \item[Contrato y regulación.] Se asume un contrato o acuerdo técnico con
+  \item \textbf{Contrato y regulación.} Se asume un contrato o acuerdo técnico con
   alcance, interfaces y criterios de aceptación definidos. La normativa
   obligatoria \textbf{no está indicada en el enunciado} y deberá
   determinarse según país, maquinaria y funciones implementadas. Si hay
@@ -70,17 +70,17 @@ operaciones industriales.
   sin afirmar que sea automáticamente obligatoria
   \cite{iec61508_2010}.
 
-  \item[Disponibilidad del cliente.] \textbf{Limitada, bajo supuesto:}
+  \item \textbf{Disponibilidad del cliente.} \textbf{Limitada, bajo supuesto:}
   se presume que operadores y técnicos trabajan por turnos. Serían
   posibles reuniones programadas para aclarar requisitos, revisar
   documentos y participar en pruebas de aceptación, pero no necesariamente
   reuniones diarias.
 
-  \item[Tamaño e integración.] \textbf{Medio, bajo supuesto:} el alcance
+  \item \textbf{Tamaño e integración.} \textbf{Medio, bajo supuesto:} el alcance
   incluye firmware o lógica de control, sensores, actuadores, una interfaz
   de operación y pruebas de integración con el equipo físico. No se
   dispone de estimaciones reales de esfuerzo ni de componentes.
-\end{description}
+\end{itemize}
 
 \subsubsection{Modelo elegido y justificación}
 \textbf{Elección propuesta: modelo en cascada con verificaciones técnicas
