@@ -1,3 +1,44 @@
 % Responsable: Tahiny · Ronda 2 (sábado 14, hasta 13.00)
 % Para cada concepto: (i) definición formal con cita IEEE comprimida, (ii) explicación propia de mínimo 3 oraciones, (iii) ejemplo del Sistema de gestión para un restaurante con IA.
 \subsection{Modelo de calidad ISO/IEC 25010:2023}
+
+La calidad de un sistema no se especifica con adjetivos como ``r\'apido'' o ``seguro'', sino con un modelo que defina qu\'e propiedades se miden. ISO/IEC 25010:2023 ofrece ese modelo para el producto de software y de sistemas \cite{iso25010}.
+
+\subsubsection{El modelo de calidad del producto y sus nueve caracter\'isticas}
+\textbf{(i) Definici\'on formal.} ISO/IEC 25010:2023 define un modelo de calidad del producto compuesto por nueve caracter\'isticas, cada una dividida en subcaracter\'isticas: idoneidad funcional, eficiencia de desempe\~no, compatibilidad, capacidad de interacci\'on, fiabilidad, seguridad, mantenibilidad, flexibilidad y protecci\'on (\emph{safety}) \cite{iso25010}. % VERIFICAR: nombres y subcaracteristicas de la Tabla 2 contra el texto de la norma
+\par
+\textbf{(ii) Explicaci\'on propia.} El modelo funciona como un vocabulario com\'un: cuando alguien pide ``que el sistema sea confiable'', el equipo puede preguntar a cu\'al subcaracter\'istica se refiere (disponibilidad, tolerancia a fallos, recuperabilidad) y c\'omo se medir\'a. En esta edici\'on, la antigua usabilidad pas\'o a llamarse capacidad de interacci\'on y se a\~nadieron flexibilidad y protecci\'on. Usar el modelo evita olvidar dimensiones de calidad y facilita acordar con el cliente qu\'e importa m\'as.\par
+\textbf{(iii) Ejemplo en El Balc\'on.} La Tabla~\ref{tab:iso} aplica las nueve caracter\'isticas a El Balc\'on e indica qu\'e requisito de la Tabla~\ref{tab:requisitos} cubre cada una.\par
+
+\begin{table}[ht]
+\centering
+\small
+\caption{Caracter\'isticas de ISO/IEC 25010:2023 aplicadas al SGR-IA de El Balc\'on \cite{iso25010}.}
+\label{tab:iso}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}p{4.3cm}>{\raggedright\arraybackslash}p{5.2cm}>{\raggedright\arraybackslash}p{2.2cm}@{}}
+\toprule
+\textbf{Caracter\'istica} & \textbf{Subcaracter\'isticas} & \textbf{Qu\'e significa en El Balc\'on} & \textbf{Requisito} \\
+\midrule
+Idoneidad funcional & Completitud, correcci\'on y pertinencia funcional & El pron\'ostico de demanda debe acertar lo suficiente para decidir las compras & RNF-05 \\
+Eficiencia de desempe\~no & Comportamiento temporal, uso de recursos, capacidad & Respuesta r\'apida del estado de pedidos en hora pico & RNF-01 \\
+Compatibilidad & Coexistencia, interoperabilidad & Intercambio de comprobantes con el servicio web del SRI & RI-02 \\
+Capacidad de interacci\'on & Reconocibilidad, aprendizaje, operabilidad, protecci\'on ante errores del usuario, entre otras & Un mesero nuevo aprende a tomar pedidos con poca capacitaci\'on & RNF-04 \\
+Fiabilidad & Ausencia de fallos, disponibilidad, tolerancia a fallos, recuperabilidad & El sistema funciona durante todo el horario de atenci\'on de El Balc\'on & RNF-03 \\
+Seguridad & Confidencialidad, integridad, no repudio, responsabilidad, autenticidad, resistencia & Acceso por rol y protecci\'on de los datos de los clientes & RNF-02, RCF-01 \\
+Mantenibilidad & Modularidad, reusabilidad, analizabilidad, modificabilidad, testeabilidad & Cambiar el men\'u o la tarifa de IVA sin reescribir el sistema & No priorizada \\
+Flexibilidad & Adaptabilidad, escalabilidad, instalabilidad, reemplazabilidad & Abrir un segundo local con la misma plataforma & No priorizada \\
+Protecci\'on (\emph{safety}) & Restricci\'on operacional, identificaci\'on de riesgos, seguridad ante fallos, advertencia de peligros, integraci\'on segura & El sistema no controla equipos de cocina & No aplica \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Calidad y requisitos no funcionales}
+\textbf{(i) Definici\'on formal.} Los requisitos no funcionales, llamados requisitos de calidad por Pohl, expresan qu\'e tan bien debe cumplir el sistema sus funciones \cite{pohl2025}; Glinz advierte que el t\'ermino ``no funcional'' se ha definido de formas inconsistentes y que conviene precisar cada requisito \cite{glinz2007}.\par
+\textbf{(ii) Explicaci\'on propia.} El modelo de calidad aporta la categor\'ia del requisito y la m\'etrica lo hace verificable. Un requisito de calidad bien formado indica la caracter\'istica, la medida, el umbral y las condiciones de uso. Sin esos elementos, cada persona del equipo interpretar\'ia el requisito a su manera y no habr\'ia forma de probarlo.\par
+\textbf{(iii) Ejemplo en El Balc\'on.} ``El sistema debe ser r\'apido'' se reescribe como RNF-01: el 95\,\% de las consultas de estado de pedidos debe responder en menos de 2 segundos con 50 usuarios concurrentes. La caracter\'istica es eficiencia de desempe\~no, la medida es el tiempo de respuesta, el umbral es 2 segundos y la condici\'on es la carga de 50 usuarios.\par
+
+\subsubsection{Selecci\'on de caracter\'isticas relevantes}
+\textbf{(i) Definici\'on formal.} No todas las caracter\'isticas del modelo tienen el mismo peso en todo producto; la selecci\'on de las relevantes depende del contexto de uso y de las necesidades de los stakeholders \cite{iso25010}. % VERIFICAR: confirmar en 25010:2023 la idea de seleccionar caracteristicas segun el contexto
+\par
+\textbf{(ii) Explicaci\'on propia.} Especificar las nueve caracter\'isticas con el mismo detalle ser\'ia costoso y poco realista en un proyecto de un semestre. Lo recomendable es priorizar las que afectan directamente al negocio y justificar las que se dejan fuera. Esa justificaci\'on tambi\'en es parte del an\'alisis de requisitos, porque deja claro qu\'e se decidi\'o no especificar.\par
+\textbf{(iii) Ejemplo en El Balc\'on.} Se priorizaron cinco caracter\'isticas: desempe\~no, seguridad, fiabilidad, capacidad de interacci\'on e idoneidad funcional, m\'as la compatibilidad con el SRI. Mantenibilidad y flexibilidad quedan para una versi\'on posterior, y protecci\'on no aplica porque el sistema no controla equipos de cocina.\par
