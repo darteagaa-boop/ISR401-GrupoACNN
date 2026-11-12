@@ -1,0 +1,102 @@
+\documentclass[conference,onecolumn]{IEEEtran}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{csquotes}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+\usepackage[backend=biber,style=ieee,sorting=none]{biblatex}
+\addbibresource{referencias.bib}
+\AtBeginDocument{\spanishplainpercent}
+
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\renewcommand{\IEEEkeywordsname}{Palabras clave}
+
+\title{PE1: Ingeniería de Requisitos y Proceso de Requisitos aplicados al Sistema de gestión para un restaurante con IA}
+\author{\IEEEauthorblockN{Arteaga Alava Danela Dayana, Chavarría Cuenca Tahiny Mel,\\
+Naranjo Alfonzo Anthony Alexander}
+\IEEEauthorblockA{Grupo ACNN · Carrera de Software\\
+Facultad de Ciencias de la Computación\\
+Universidad Técnica Estatal de Quevedo, Ecuador\\
+Ingeniería de Requerimientos -- ISR-401}}
+
+% Numeración arábiga como en la guía (0, 2, 2.1...)
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
+
+\begin{document}
+\maketitle
+% Orden de las fuentes obligatorias según la guía: [1] a [10]
+\nocite{ieee29148,iso15288,iso12207,iso25010,pohl2025,swebok2024,pmbok7,ireb31,moore2014,mavin2009}
+
+\section*{Datos generales}
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabularx}{\textwidth}{@{}p{0.25\textwidth}Y@{}}
+\toprule
+\textbf{Campo} & \textbf{Detalle}\\
+\midrule
+Asignatura & Ingeniería de Requerimientos (ISR-401) · 4.\textsuperscript{o} nivel · Paralelo B\\
+Práctica & PE1 · Práctica experimental de la Unidad 1\\
+Grupo & ACNN\\
+Integrantes y roles & Arteaga Alava Danela Dayana (Analista Líder, Investigador A y Documentador), Chavarría Cuenca Tahiny Mel (Investigador B), Naranjo Alfonzo Anthony Alexander (Investigador C)\\
+Docente & Gleiston Cicerón Guerrero Ulloa, PhD\\
+Sistema del PFC & Sistema de gestión para un restaurante con IA\\
+Fecha de cierre & Domingo 15 de noviembre de 2026, 23:59\\
+Repositorio & \url{https://github.com/darteagaa-boop/ISR401-GrupoACNN}\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\tableofcontents
+
+\setcounter{section}{-1}
+\section{Sistema del Proyecto Fin de Curso}
+\input{secciones/0-pfc}
+
+\setcounter{section}{1}
+\section{Fundamento teórico}
+\input{secciones/2-1}
+\input{secciones/2-2}
+\input{secciones/2-3}
+\input{secciones/2-4}
+\input{secciones/2-5}
+\input{secciones/2-6}
+
+\section{Artefactos del procedimiento}
+\input{secciones/3-requisitos}
+\input{secciones/3-propiedades}
+\input{secciones/3-contexto}
+\input{secciones/3-actores}
+\input{secciones/3-proceso}
+\input{secciones/3-mapa}
+
+\section{Conclusiones}
+\input{secciones/conclusiones}
+
+\printbibliography[title={Referencias}]
+
+\appendix
+\renewcommand{\thesection}{\Alph{section}}
+\section{Lista de referencias exportada}
+\input{secciones/anexo-a}
+
+\section{Biblioteca de referencias en el gestor bibliográfico}
+\input{secciones/anexo-b}
+
+\section*{Declaración de uso de inteligencia artificial}
+\input{secciones/declaracion-ia}
+
+\end{document}

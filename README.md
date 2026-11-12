@@ -17,6 +17,7 @@ Docente: Gleiston Cicerón Guerrero Ulloa, PhD.
 | Carpeta | Actividad | Archivo principal |
 |---|---|---|
 | `FORM-PC-01/` | Comparación de modelos de proceso de requisitos en escenarios reales | `FORM-PC-01/main.tex` |
+| `PE1-U1/` | Práctica experimental 1: Ingeniería de Requisitos y Proceso de Requisitos aplicados al Sistema de gestión para un restaurante con IA | `PE1-U1/main.tex` |
 
 Estructura de `FORM-PC-01/`:
 
@@ -34,6 +35,26 @@ Estructura de `FORM-PC-01/`:
 | `secciones/escenario-cooperativa.tex` | Escenario: plataforma de una cooperativa | José |
 | `secciones/matriz.tex` | Matriz escenario por modelo (cada integrante llena su fila) | Todos |
 | `secciones/framework-pohl.tex` | Framework de Pohl aplicado al GAD | Danela |
+
+Estructura de `PE1-U1/` (integrantes: Arteaga Alava Danela Dayana, Chavarría Cuenca Tahiny Mel y Naranjo Alfonzo Anthony Alexander):
+
+| Archivo | Contenido | Responsable |
+|---|---|---|
+| `main.tex` | Documento principal, une las secciones con `\input` | Danela |
+| `referencias.bib` | Fuentes obligatorias [1] a [10] en estilo IEEE (`biblatex`) | Danela |
+| `secciones/0-pfc.tex` | Sección 0: sistema del PFC, stakeholders y tipo de sistema | Danela |
+| `secciones/2-1.tex`, `secciones/2-2.tex` | Fundamento teórico 2.1 y 2.2 | Danela |
+| `secciones/2-3.tex`, `secciones/2-4.tex` | Fundamento teórico 2.3 y 2.4 | Tahiny |
+| `secciones/2-5.tex`, `secciones/2-6.tex` | Fundamento teórico 2.5 y 2.6 | Anthony |
+| `secciones/3-requisitos.tex` | Tabla de 15 requisitos aplicada al PFC | Tahiny |
+| `secciones/3-propiedades.tex` | Evaluación de los requisitos con IEEE 29148 | Danela |
+| `secciones/3-contexto.tex` | Límite del sistema, visión y ocho perspectivas de contexto | Anthony |
+| `secciones/3-actores.tex` | Actores del proceso y framework de IR aplicado | Anthony |
+| `secciones/3-proceso.tex` | Aplicación del proceso de requisitos | Danela |
+| `secciones/3-mapa.tex` | Mapa conceptual integrador (`figuras/`) | Danela |
+| `secciones/conclusiones.tex` | Cinco conclusiones | Todos |
+| `secciones/anexo-a.tex`, `secciones/anexo-b.tex` | Anexos A y B | Danela |
+| `secciones/declaracion-ia.tex` | Declaración de uso de IA | Todos |
 
 ## Cómo compilar
 
@@ -63,3 +84,18 @@ El resultado es `FORM-PC-01/main.pdf`.
 
 En Overleaf: subir la carpeta `FORM-PC-01` completa, elegir el compilador
 pdfLaTeX y compilar. Overleaf ejecuta `biber` automáticamente.
+
+### Compilar PE1-U1
+
+Se usan el mismo compilador, el mismo orden de comandos y las mismas dependencias,
+desde la carpeta `PE1-U1`. Además requiere el paquete `graphicx` para las figuras.
+
+```bash
+cd PE1-U1
+pdflatex main.tex
+biber main
+pdflatex main.tex
+pdflatex main.tex
+```
+
+El resultado es `PE1-U1/main.pdf`.
