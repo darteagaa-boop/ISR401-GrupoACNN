@@ -1,3 +1,137 @@
 % Responsable: Anthony · Ronda 2 (sábado 14, hasta 13.00)
 % Para cada concepto: (i) definición formal con cita IEEE comprimida, (ii) explicación propia de mínimo 3 oraciones, (iii) ejemplo del Sistema de gestión para un restaurante con IA.
 \subsection{Proceso de requisitos: framework de Pohl, modelos de proceso y contexto del sistema}
+\subsubsection{Proceso de requisitos}
+
+\textbf{(i) Definición formal.}
+La Ingeniería de Requisitos comprende un conjunto de actividades destinadas
+a identificar, documentar, analizar, negociar, validar y gestionar las
+necesidades y requisitos de los stakeholders a lo largo del desarrollo del
+sistema \cite{ieee29148,pohl2025}. Estas actividades permiten transformar
+necesidades del contexto en requisitos suficientemente claros para orientar
+el diseño, la implementación y la posterior verificación de la solución.
+
+\textbf{(ii) Explicación propia.}
+El proceso de requisitos no consiste únicamente en elaborar una lista de
+funciones que tendrá un programa. Primero es necesario comprender el problema,
+identificar a las personas involucradas y conocer las restricciones del
+entorno donde funcionará el sistema. Posteriormente, la información obtenida
+debe documentarse, revisarse y mantenerse actualizada cuando aparezcan cambios
+durante el proyecto.
+
+\textbf{(iii) Aplicación al PFC.}
+En El Balcón Restaurant el proceso comienza con el análisis de la situación
+actual, donde los pedidos se registran en papel y el inventario se controla
+manualmente. A partir de este contexto se identifican necesidades relacionadas
+con pedidos, reservas, inventario, ventas y apoyo mediante inteligencia
+artificial. Los requisitos obtenidos se documentan y posteriormente deben
+revisarse con el propietario y los usuarios antes de considerarlos aceptados.
+
+\subsubsection{Modelos de proceso}
+
+\textbf{(i) Definición formal.}
+Los procesos de desarrollo pueden organizar la Ingeniería de Requisitos de
+diferentes maneras. Existen enfoques tradicionales, enfoques ágiles y
+combinaciones de ambos, de modo que las actividades de requisitos pueden
+realizarse secuencialmente o repetirse de manera iterativa durante el ciclo
+de vida \cite{pohl2025,iso12207}.
+
+\textbf{(ii) Explicación propia.}
+Un proceso tradicional intenta establecer una especificación amplia antes de
+avanzar hacia las siguientes etapas del desarrollo. Un proceso iterativo o
+ágil permite revisar y ajustar los requisitos a medida que los usuarios
+evalúan resultados parciales. En la práctica, el equipo debe seleccionar la
+forma de trabajo de acuerdo con el tamaño del proyecto, la estabilidad de los
+requisitos, la participación del cliente y el nivel de riesgo existente.
+
+\textbf{(iii) Aplicación al PFC.}
+Para el sistema de El Balcón resulta conveniente revisar los requisitos de
+forma iterativa con el propietario y con los usuarios del restaurante. Por
+ejemplo, el flujo de registro de pedidos puede ser validado antes de desarrollar
+completamente las funciones de inventario o inteligencia artificial. De esta
+forma, los comentarios del personal pueden generar ajustes sin esperar hasta
+el final del proyecto.
+
+\subsubsection{Framework de Ingeniería de Requisitos de Pohl}
+
+\textbf{(i) Definición formal.}
+El framework de Pohl organiza la Ingeniería de Requisitos mediante tres
+actividades centrales: elicitación, documentación y negociación. Estas se
+complementan con dos actividades transversales: validación y gestión, que
+acompañan al proceso y a los artefactos generados durante el proyecto
+\cite{pohl2025}.
+
+\textbf{(ii) Explicación propia.}
+La elicitación permite descubrir necesidades e información relevante del
+contexto. La documentación convierte esa información en artefactos que puedan
+ser analizados y utilizados por el equipo, mientras que la negociación ayuda
+a resolver diferencias y establecer acuerdos entre stakeholders. La
+validación comprueba la calidad y adecuación de lo producido, mientras que
+la gestión controla cambios, versiones, prioridades y trazabilidad de los
+requisitos.
+
+\textbf{(iii) Aplicación al PFC.}
+En El Balcón, la elicitación permite conocer cómo se registran actualmente
+los pedidos y cómo se controla el inventario. La documentación transforma
+estos hallazgos en requisitos y artefactos del proyecto; la negociación
+permite acordar prioridades entre el propietario y los usuarios. La validación
+comprueba que los requisitos representen realmente las necesidades del
+restaurante y la gestión permite mantener controlados los cambios realizados
+durante el desarrollo.
+
+\begin{table}[H]
+\centering
+\footnotesize
+\caption{Aplicación del framework de Pohl al PFC}
+\label{tab:framework-pohl}
+\begin{tabularx}{\textwidth}{@{}p{0.20\textwidth}p{0.18\textwidth}Y@{}}
+\toprule
+\textbf{Tipo} & \textbf{Actividad} & \textbf{Aplicación en El Balcón} \\
+\midrule
+Central &
+Elicitación &
+Obtener necesidades del propietario, cocina, personal de servicio y clientes. \\
+
+Central &
+Documentación &
+Registrar requisitos, contexto, actores, restricciones y demás artefactos del PFC. \\
+
+Central &
+Negociación &
+Resolver diferencias y acordar prioridades y alcance con los stakeholders. \\
+
+Transversal &
+Validación &
+Comprobar que los requisitos sean correctos, claros y representen las
+necesidades reales del restaurante. \\
+
+Transversal &
+Gestión &
+Controlar cambios, versiones, prioridades y trazabilidad de los requisitos. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsubsection{Límite y contexto del sistema}
+
+\textbf{(i) Definición formal.}
+El límite del sistema establece qué elementos forman parte de la solución y
+cuáles pertenecen a su entorno. El contexto de Ingeniería de Requisitos
+comprende los objetos, personas, sistemas, procesos y condiciones externas
+que pueden influir sobre los requisitos del sistema
+\cite{ieee29148,pohl2025}.
+
+\textbf{(ii) Explicación propia.}
+Definir el límite evita asignar al software responsabilidades que pertenecen
+a personas u organizaciones externas. También permite reconocer las
+interfaces mediante las cuales el sistema intercambiará información con su
+entorno. Un límite claramente establecido facilita identificar requisitos,
+restricciones y dependencias antes de implementar la solución.
+
+\textbf{(iii) Aplicación al PFC.}
+Dentro del límite del sistema de El Balcón se encuentran las funciones de
+gestión de pedidos, reservas, menú, inventario, ventas y los componentes de
+IA definidos para el proyecto. Fuera del sistema se encuentran actores como
+el propietario, personal de servicio, jefe de cocina, clientes y entidades
+externas con las que pueda existir intercambio de información. Estas
+relaciones se detallan posteriormente en el artefacto de contexto del PFC.
