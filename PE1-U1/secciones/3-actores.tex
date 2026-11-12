@@ -1,3 +1,136 @@
 % Responsable: Anthony · Adicional de la rúbrica · Ronda 4 (domingo 15, hasta 15.00)
 % Rúbrica C3: actores del proceso (ingeniero de requisitos, cliente, usuario, desarrollador) con roles concretos en el restaurante, y actividades centrales y transversales del framework de Pohl mapeadas al sistema.
 \subsection{Actores del proceso y framework de IR aplicado}
+\subsubsection{Actores del proceso de requisitos}
+
+El proceso de Ingeniería de Requisitos requiere la participación de actores
+con responsabilidades diferentes. Para el PFC se identifican los roles de
+ingeniero de requisitos, cliente, usuario y desarrollador, relacionándolos
+con el contexto concreto de El Balcón Restaurant
+\cite{ieee29148,pohl2025}.
+
+\begin{table}[H]
+\centering
+\footnotesize
+\caption{Actores del proceso de requisitos aplicados al PFC}
+\label{tab:actores-ir}
+\begin{tabularx}{\textwidth}{@{}p{0.21\textwidth}p{0.28\textwidth}Y@{}}
+\toprule
+\textbf{Actor del proceso} &
+\textbf{Representación en el PFC} &
+\textbf{Responsabilidad} \\
+\midrule
+
+Ingeniero de requisitos &
+Equipo ACNN &
+Elicitar, analizar, documentar, negociar y validar las necesidades del
+restaurante, manteniendo coherencia y trazabilidad entre los artefactos. \\
+
+Cliente &
+Propietario de El Balcón Restaurant &
+Expresar objetivos y necesidades del negocio, establecer prioridades y
+aprobar los requisitos y el alcance acordado. \\
+
+Usuario &
+Jefe de cocina, meseros, cajero y clientes &
+Aportar información sobre los procesos reales, las tareas cotidianas, las
+dificultades y las condiciones de uso que debe considerar el sistema. \\
+
+Desarrollador &
+Equipo técnico encargado de implementar el PFC &
+Transformar los requisitos aprobados en componentes de software, mantener
+trazabilidad con la especificación e informar restricciones técnicas que
+puedan afectar la solución. \\
+
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsubsection{Actividades centrales del framework de Pohl}
+
+Pohl organiza las actividades centrales de Ingeniería de Requisitos en
+elicitación, documentación y negociación \cite{pohl2025}. Estas actividades
+se relacionan entre sí y pueden repetirse durante el proyecto cuando se
+descubre nueva información o se modifican las necesidades.
+
+\begin{table}[H]
+\centering
+\footnotesize
+\caption{Actividades centrales de IR aplicadas a El Balcón}
+\label{tab:actividades-centrales}
+\begin{tabularx}{\textwidth}{@{}p{0.20\textwidth}YY@{}}
+\toprule
+\textbf{Actividad} &
+\textbf{Aplicación en el restaurante} &
+\textbf{Artefacto o resultado} \\
+\midrule
+
+Elicitación &
+Obtener información del propietario y los usuarios acerca del registro de
+pedidos, reservas, inventario, ventas y necesidades de apoyo mediante IA. &
+Stakeholders, contexto, preguntas de análisis y candidatos a requisitos. \\
+
+Documentación &
+Representar de forma estructurada las necesidades obtenidas para que puedan
+ser revisadas y utilizadas durante el desarrollo. &
+Tabla de requisitos, descripción del sistema, límite, visión y perspectivas
+de contexto. \\
+
+Negociación &
+Resolver diferencias de prioridad, alcance o interpretación entre el
+propietario, usuarios y equipo del proyecto. &
+Requisitos acordados, prioridades y decisiones de alcance. \\
+
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsubsection{Actividades transversales}
+
+La validación y la gestión son actividades transversales porque acompañan a
+las actividades centrales y a los artefactos producidos durante el proceso
+\cite{pohl2025}.
+
+\begin{table}[H]
+\centering
+\footnotesize
+\caption{Actividades transversales aplicadas al PFC}
+\label{tab:actividades-transversales}
+\begin{tabularx}{\textwidth}{@{}p{0.20\textwidth}YY@{}}
+\toprule
+\textbf{Actividad} &
+\textbf{Aplicación en El Balcón} &
+\textbf{Resultado esperado} \\
+\midrule
+
+Validación &
+Revisar con el cliente y los usuarios que los requisitos representen las
+necesidades reales y evaluar que sean claros, verificables y coherentes. &
+Corrección de ambigüedades, conflictos, omisiones e inconsistencias antes de
+la implementación. \\
+
+Gestión &
+Controlar cambios, prioridades, versiones y relaciones de trazabilidad de
+los requisitos durante el proyecto. &
+Historial de cambios y correspondencia entre necesidades, requisitos,
+artefactos y futuras pruebas. \\
+
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsubsection{Mapeo integrado del framework}
+
+La aplicación del framework permite relacionar los actores con las actividades
+que realizan durante el proyecto. El propietario participa principalmente
+como fuente de necesidades, negociador de prioridades y responsable de la
+aceptación del alcance. Los usuarios aportan conocimiento operativo y
+participan en la validación de los flujos de trabajo. El equipo ACNN organiza
+la elicitación, documentación, negociación, validación y gestión de los
+artefactos, mientras que el desarrollador utiliza los requisitos aceptados
+como entrada para construir y verificar la solución.
+
+Este mapeo demuestra que la Ingeniería de Requisitos del PFC no se limita a
+redactar requisitos, sino que establece responsabilidades concretas,
+actividades y artefactos para transformar las necesidades de El Balcón
+Restaurant en una especificación controlada y trazable.
