@@ -1,3 +1,39 @@
 % Responsable: Danela · Ronda 1 (viernes 13, hasta 21:00)
-% Paso 1: c) descripción del PFC (máx. 150 palabras), d) 5 stakeholders con la matriz poder/interés [7], e) tipo de sistema y su justificación.
+\subsection{Descripción del sistema}
+El Sistema de gestión para un restaurante con IA está dirigido a \textbf{El Balcón Restaurant}, un restaurante de la ciudad de Quevedo que hoy registra sus pedidos en papel y controla su inventario de forma manual, lo que provoca errores en las comandas, demoras en la atención y pérdida de insumos. El sistema digitaliza la toma de pedidos en mesa, para llevar y a domicilio, las reservas, el menú, el inventario y el cierre de caja. Su componente de inteligencia artificial estima la demanda diaria de cada plato para sugerir las compras de insumos y recomienda platos a los clientes según sus pedidos anteriores. Sus usuarios principales son el propietario, el jefe de cocina, los meseros, el cajero y los clientes, dentro de un negocio familiar de 10 mesas que atiende en horario de almuerzo y cena.
 
+\subsection{Stakeholders principales}
+Se identificaron cinco stakeholders y se clasificaron con la matriz de poder e interés \cite{pmbok7}, que muestra la estrategia de relación según la autoridad de cada uno sobre el proyecto y su interés en el resultado.
+
+\begin{table}[H]
+\centering\footnotesize
+\caption{Stakeholders principales del sistema}\label{tab:stakeholders}
+\begin{tabularx}{\textwidth}{@{}p{0.04\textwidth}p{0.20\textwidth}Yp{0.06\textwidth}p{0.07\textwidth}p{0.14\textwidth}@{}}
+\toprule
+\textbf{ID} & \textbf{Stakeholder} & \textbf{Rol en el sistema} & \textbf{Poder} & \textbf{Interés} & \textbf{Estrategia}\\
+\midrule
+\textbf{S1} & Propietario del restaurante & Financia el proyecto, define prioridades y aprueba los requisitos & Alto & Alto & Gestionar de cerca\\
+\textbf{S2} & Jefe de cocina & Recibe las comandos, controla los tiempos de preparación y el consumo de insumos & Bajo & Alto & Mantener informado\\
+\textbf{S3} & Personal de servicio (meseros y cajero) & Registra pedidos, cobra y atiende a los clientes en el día a día & Bajo & Alto & Mantener informado\\
+\textbf{S4} & Clientes & Hacen pedidos, reservas y reciben recomendaciones de platos & Bajo & Bajo & Monitorear\\
+\textbf{S5} & Servicio de Rentas Internas (SRI) & Regula la emisión de comprobantes electrónicos de las ventas & Alto & Bajo & Mantener satisfecho\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering\footnotesize
+\caption{Matriz de poder e interés}\label{tab:poder-interes}
+\begin{tabular}{@{}p{0.16\textwidth}|p{0.36\textwidth}|p{0.36\textwidth}@{}}
+\toprule
+ & \textbf{Interés bajo} & \textbf{Interés alto}\\
+\midrule
+\textbf{Poder alto} & Mantener satisfecho \newline S5 Servicio de Rentas Internas & Gestionar de cerca \newline S1 Propietario del restaurante\\
+\midrule
+\textbf{Poder bajo} & Monitorear \newline S4 Clientes & Mantener informado \newline S2 Jefe de cocina \newline S3 Personal de servicio\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Tipo de sistema}
+El sistema es un \textbf{sistema de información de gestión con un componente de inteligencia artificial}. Es un sistema de información porque su función principal es registrar, almacenar y procesar los datos de pedidos, reservas, inventario y ventas para apoyar la operación y las decisiones del restaurante. Además, es un sistema sociotécnico, porque su funcionamiento depende de las personas que lo usan y de los procedimientos del negocio, como la forma de tomar pedidos o de cerrar la caja. Su componente de IA no controla procesos físicos ni opera en tiempo real crítico, sino que ofrece sugerencias que el personal decide si acepta. Por eso no corresponde a un sistema embebido ni a un sistema crítico de seguridad.
