@@ -1,3 +1,50 @@
 % Responsable: Tahiny · Ronda 3 (sábado 14, hasta 21.00)
 % Paso 4 y rúbrica C1: mínimo 15 requisitos únicos con ID [ID | Tipo | Descripción | MoSCoW | Fuente] cubriendo negocio, stakeholder, usuario, funcional (EARS [10]), no funcional (ISO/IEC 25010:2023 [4]), interfaz (con su tipo), rendimiento, restricción y conformidad.
-\subsection{Tabla de tipos de requisitos aplicada al PFC}
+\subsection{Tabla de requisitos de El Balc\'on}
+
+Esta secci\'on presenta los 15 requisitos \'unicos del sistema de gesti\'on con IA (SGR-IA) para El Balc\'on Restaurant, en Quevedo, Los R\'ios \cite{consentimiento2026}. Seg\'un el formulario de consentimiento del proyecto, el estudio abarca los procesos de pedidos y ventas, inventario, compras y proveedores, reservas, atenci\'on al cliente, preparaci\'on de alimentos, gesti\'on del personal y administraci\'on, incluidos los ingresos, egresos y reportes \cite{consentimiento2026}. Se trata de una propuesta acad\'emica: no implica instalar ni entregar el sistema al restaurante. Cada requisito tiene identificador, tipo, descripci\'on, prioridad MoSCoW y fuente. Por el compromiso de confidencialidad con los participantes, la fuente se indica con un rol gen\'erico y no con nombres ni cargos espec\'ificos. Los valores num\'ericos son metas propuestas por el equipo y deben validarse con los stakeholders de la Secci\'on~0.
+
+\subsubsection{Convenciones de redacci\'on}
+\textbf{Sintaxis EARS.} (i) EARS es un m\'etodo que estructura los requisitos en lenguaje natural con plantillas de palabras clave, seg\'un cinco patrones: ub\'icuo, dirigido por evento, dirigido por estado, comportamiento no deseado y caracter\'istica opcional \cite{mavin2009}. (ii) Cada patr\'on separa la condici\'on de la respuesta del sistema, lo que reduce la ambig\"uedad del lenguaje natural y facilita convertir el requisito en una prueba. En espa\~nol, las palabras clave son ``Cuando'', ``Mientras'', ``Si..., entonces'' y ``Donde''. (iii) En la tabla, RF-01 usa el patr\'on de evento, RF-02 el de estado y RF-03 el de comportamiento no deseado.
+
+\textbf{Prioridad MoSCoW.} (i) MoSCoW clasifica los requisitos en \emph{Must} (M), \emph{Should} (S), \emph{Could} (C) y \emph{Won't} (W) para esta versi\'on \cite{ireb2023,wiegers2013}. % VERIFICAR: confirmar que MoSCoW aparece en IREB/Wiegers; si no, pedir a Danela autorizar la fuente original
+(ii) La t\'ecnica obliga a decidir qu\'e es imprescindible y qu\'e puede esperar, lo cual es necesario con el tiempo limitado de un semestre. (iii) El env\'io del pedido a cocina es M porque sin \'el El Balc\'on no puede operar, mientras que la impresi\'on de comandas (RI-01) es C porque la pantalla de cocina ya cumple esa funci\'on.
+
+\textbf{Caracter\'istica de calidad.} Cada requisito no funcional indica su caracter\'istica de ISO/IEC 25010:2023 \cite{iso25010}, como se explic\'o en la Secci\'on~2.4, y cada interfaz indica su tipo (usuario, hardware, software o comunicaciones).
+
+\subsubsection{Requisitos}
+\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{1.35cm}>{\raggedright\arraybackslash}p{2.7cm}>{\raggedright\arraybackslash}p{6.3cm}c>{\raggedright\arraybackslash}p{2.2cm}@{}}
+\caption{Requisitos del SGR-IA de El Balc\'on clasificados por tipo.}\label{tab:requisitos}\\
+\toprule
+\textbf{ID} & \textbf{Tipo} & \textbf{Descripci\'on} & \textbf{MoSCoW} & \textbf{Fuente} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{ID} & \textbf{Tipo} & \textbf{Descripci\'on} & \textbf{MoSCoW} & \textbf{Fuente} \\
+\midrule
+\endhead
+\midrule
+\multicolumn{5}{r}{\emph{contin\'ua en la p\'agina siguiente}}\\
+\endfoot
+\bottomrule
+\endlastfoot
+RN-01 & Negocio & Reducir el desperdicio de insumos de El Balc\'on mediante la predicci\'on de demanda con IA, con la meta de disminuir las mermas en al menos 15\,\% en seis meses de operaci\'on. & M & Administraci\'on \\
+RS-01 & Stakeholder & El personal de cocina necesita ver en una sola pantalla los pedidos pendientes ordenados por tiempo de espera. & M & Cocina \\
+RU-01 & Usuario & Como mesero, necesito registrar el pedido de una mesa desde una tablet en menos de un minuto para atender a m\'as clientes en hora pico. & M & Mesero \\
+RF-01 & Funcional (EARS: evento) & Cuando el mesero confirme un pedido, el sistema deber\'a enviarlo a la pantalla de cocina en menos de 2 segundos. & M & Cocina \\
+RF-02 & Funcional (EARS: estado) & Mientras exista un historial de ventas de al menos 30 d\'ias, el sistema deber\'a generar el pron\'ostico semanal de demanda por plato. & S & Administraci\'on \\
+RF-03 & Funcional (EARS: comportamiento no deseado) & Si el pago con tarjeta es rechazado, entonces el sistema deber\'a mantener la cuenta abierta y notificar al cajero. & M & Caja \\
+RNF-01 & Rendimiento; ISO 25010: eficiencia de desempe\~no & El 95\,\% de las consultas de estado de pedidos deber\'a responder en menos de 2 segundos con 50 usuarios concurrentes. & M & Administraci\'on \\
+RNF-02 & No funcional; ISO 25010: seguridad & El sistema deber\'a restringir el acceso a cada funci\'on seg\'un el rol del usuario (mesero, cocina, cajero, administrador) y exigir autenticaci\'on con contrase\~na. & M & Administraci\'on \\
+RNF-03 & No funcional; ISO 25010: fiabilidad & El sistema deber\'a estar disponible al menos el 99,5\,\% del horario de atenci\'on de El Balc\'on. & S & Administraci\'on \\
+RNF-04 & No funcional; ISO 25010: capacidad de interacci\'on & Un mesero nuevo deber\'a completar un pedido sin ayuda tras una capacitaci\'on de 30 minutos como m\'aximo. & S & Mesero \\
+RNF-05 & No funcional; ISO 25010: idoneidad funcional & El error porcentual medio absoluto (MAPE) del pron\'ostico de demanda deber\'a ser menor o igual a 20\,\% sobre el conjunto de prueba. & S & Administraci\'on \\
+RI-01 & Interfaz de hardware & El sistema deber\'a imprimir las comandas en una impresora t\'ermica de cocina conectada por red local o USB. & C & Cocina \\
+RI-02 & Interfaz de software & El sistema deber\'a enviar los comprobantes electr\'onicos al servicio web del SRI \cite{sriFE} y registrar la autorizaci\'on recibida. & M & Administraci\'on \\
+RC-01 & Restricci\'on & El sistema deber\'a desarrollarse con herramientas de licencia libre y entregarse en funcionamiento al cierre del semestre acad\'emico. & M & Docente \\
+RCF-01 & Conformidad & El sistema deber\'a tratar los datos personales de los clientes conforme a la Ley Org\'anica de Protecci\'on de Datos Personales \cite{lopdp2021}, incluido el registro del consentimiento. & M & Normativa \\
+\end{longtable}
+\normalsize
+
+\textbf{Cobertura de tipos.} Los 15 requisitos cubren los nueve tipos exigidos: negocio (RN-01), stakeholder (RS-01), usuario (RU-01), funcional (RF-01 a RF-03), no funcional (RNF-02 a RNF-05), interfaz (RI-01, RI-02), rendimiento (RNF-01), restricci\'on (RC-01) y conformidad (RCF-01).
