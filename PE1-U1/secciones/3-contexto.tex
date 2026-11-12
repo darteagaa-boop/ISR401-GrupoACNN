@@ -1,3 +1,231 @@
 % Responsable: Anthony · Ronda 3 (sábado 14, hasta 21.00)
 % Paso 5: a) límite del sistema con mínimo 5 entidades externas (tipo de datos, protocolo y frecuencia), b) visión en formato Moore [9], c) ocho perspectivas de contexto [5] con 3 preguntas y 2 requisitos o restricciones cada una.
 \subsection{Contexto del sistema y declaración de visión}
+
+\subsubsection{Límite del sistema}
+
+El límite del sistema permite diferenciar las funciones que pertenecen al
+SGR-IA de los actores y elementos externos con los que intercambia
+información \cite{pohl2025}. Dentro del sistema se consideran la gestión de
+pedidos, reservas, menú, inventario, ventas, cierre de caja, pronóstico de
+demanda y recomendación de platos.
+
+Los usuarios, organismos y dispositivos con los que la aplicación interactúa
+se consideran entidades externas. La Tabla~\ref{tab:limite-sistema} presenta
+las principales interfaces identificadas para el contexto de El Balcón
+Restaurant.
+
+\begin{table}[H]
+\centering
+\footnotesize
+\caption{Entidades externas y límite del sistema}
+\label{tab:limite-sistema}
+\begin{tabularx}{\textwidth}
+{@{}p{0.18\textwidth}p{0.27\textwidth}p{0.23\textwidth}Y@{}}
+\toprule
+\textbf{Entidad externa} &
+\textbf{Datos intercambiados} &
+\textbf{Medio o protocolo} &
+\textbf{Frecuencia} \\
+\midrule
+
+Propietario &
+Reportes, configuración, inventario, ventas y pronósticos. &
+Interfaz autenticada de la aplicación. &
+Diaria y bajo demanda. \\
+
+Personal de servicio &
+Pedidos, mesas, estado de atención y cobros. &
+Interfaz de usuario de la aplicación. &
+Continua durante cada turno. \\
+
+Jefe de cocina &
+Comandas, platos solicitados, cantidades y estados de preparación. &
+Interfaz del sistema y red local. &
+Por cada pedido. \\
+
+Cliente &
+Pedidos, reservas, preferencias y recomendaciones de platos. &
+Interfaz de atención del sistema. &
+Por cada pedido o reserva. \\
+
+Impresora térmica &
+Datos de comandas o comprobantes generados por el sistema. &
+Interfaz de impresión local. &
+Cuando se genera una comanda o comprobante. \\
+
+Servicio de Rentas Internas &
+Información necesaria para los comprobantes electrónicos cuando corresponda. &
+Servicio electrónico autorizado. &
+Por cada comprobante sujeto a facturación electrónica. \\
+
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Los medios de comunicación señalados representan la propuesta inicial de
+interacción y deberán validarse durante el desarrollo antes de establecer la
+arquitectura definitiva del sistema.
+
+\subsubsection{Declaración de visión}
+
+La declaración de visión resume el problema, los usuarios objetivo, el tipo
+de solución, su beneficio principal y su elemento diferenciador
+\cite{moore2014}.
+
+\begin{quote}
+\textbf{Para} el propietario y el personal de El Balcón Restaurant,
+\textbf{quienes necesitan} reducir errores en los pedidos, mejorar el control
+del inventario y disponer de información para tomar decisiones,
+\textbf{el Sistema de gestión para un restaurante con IA} es un
+\textbf{sistema de información de gestión} que centraliza pedidos, reservas,
+menú, inventario, ventas y cierre de caja, e incorpora apoyo inteligente para
+el pronóstico de demanda y la recomendación de platos.
+\textbf{A diferencia de} la gestión actual basada en registros manuales y
+pedidos en papel, \textbf{la solución propuesta} integra la información del
+restaurante y utiliza datos históricos para apoyar la planificación de
+insumos y la atención de los clientes.
+\end{quote}
+
+\subsubsection{Perspectivas de contexto}
+
+Pohl propone ocho perspectivas para estudiar sistemáticamente el contexto de
+un sistema: uso, dominio, sistema TI, desarrollo, negocio, innovación,
+sociedad y técnica \cite{pohl2025}. A continuación se aplican estas
+perspectivas al contexto de El Balcón Restaurant.
+
+\paragraph{1) Perspectiva de uso.}
+
+\textbf{Preguntas de análisis:}
+\begin{enumerate}
+    \item ¿Qué usuarios interactúan directamente con el sistema durante un turno?
+    \item ¿Qué tareas deben realizar con mayor rapidez durante las horas de mayor demanda?
+    \item ¿Qué excepciones pueden producirse durante el registro y atención de un pedido?
+\end{enumerate}
+
+\textbf{Requisitos o restricciones emergentes:}
+\begin{itemize}
+    \item El sistema deberá permitir al personal registrar un pedido y enviarlo
+    a cocina sin volver a ingresar la misma información.
+    \item La interfaz deberá facilitar el uso durante los turnos de almuerzo y
+    cena, reduciendo pasos innecesarios en las operaciones frecuentes.
+\end{itemize}
+
+\paragraph{2) Perspectiva de dominio.}
+
+\textbf{Preguntas de análisis:}
+\begin{enumerate}
+    \item ¿Qué reglas utiliza el restaurante para controlar la disponibilidad de los platos?
+    \item ¿Cómo se relacionan las recetas con el consumo de insumos del inventario?
+    \item ¿Qué estados puede tener un pedido desde su registro hasta su cobro?
+\end{enumerate}
+
+\textbf{Requisitos o restricciones emergentes:}
+\begin{itemize}
+    \item El sistema deberá mantener información de los insumos asociados a los
+    platos que requieran control de inventario.
+    \item El sistema deberá registrar el estado de los pedidos durante su ciclo
+    de atención.
+\end{itemize}
+
+\paragraph{3) Perspectiva del sistema TI.}
+
+\textbf{Preguntas de análisis:}
+\begin{enumerate}
+    \item ¿Qué dispositivos utilizarán los usuarios para acceder a la aplicación?
+    \item ¿Qué información debe compartirse entre el área de servicio y cocina?
+    \item ¿Con qué dispositivos o servicios externos deberá intercambiar datos el sistema?
+\end{enumerate}
+
+\textbf{Requisitos o restricciones emergentes:}
+\begin{itemize}
+    \item Los pedidos registrados por el personal deberán quedar disponibles
+    para el área de cocina sin duplicar el registro.
+    \item Las interfaces con dispositivos o servicios externos deberán
+    documentarse antes de su implementación.
+\end{itemize}
+
+\paragraph{4) Perspectiva de desarrollo.}
+
+\textbf{Preguntas de análisis:}
+\begin{enumerate}
+    \item ¿Cómo se gestionarán los cambios de requisitos durante el proyecto?
+    \item ¿Cómo se mantendrá la trazabilidad entre requisitos y artefactos?
+    \item ¿Cómo se validarán los incrementos desarrollados con el cliente?
+\end{enumerate}
+
+\textbf{Requisitos o restricciones emergentes:}
+\begin{itemize}
+    \item Los cambios de requisitos deberán registrarse y mantenerse
+    trazables durante el proyecto.
+    \item Las funciones principales deberán ser revisadas con representantes
+    del restaurante antes de considerarse aceptadas.
+\end{itemize}
+
+\paragraph{5) Perspectiva de negocio.}
+
+\textbf{Preguntas de análisis:}
+\begin{enumerate}
+    \item ¿Qué problemas operativos espera reducir el propietario?
+    \item ¿Qué información necesita para tomar decisiones sobre compras y ventas?
+    \item ¿Qué procesos del restaurante tienen mayor prioridad para la primera versión?
+\end{enumerate}
+
+\textbf{Requisitos o restricciones emergentes:}
+\begin{itemize}
+    \item El sistema deberá proporcionar información sobre ventas e inventario
+    para apoyar las decisiones del propietario.
+    \item Las funcionalidades implementadas deberán priorizar los procesos que
+    afectan directamente la atención de pedidos y el control de insumos.
+\end{itemize}
+
+\paragraph{6) Perspectiva de innovación.}
+
+\textbf{Preguntas de análisis:}
+\begin{enumerate}
+    \item ¿Qué decisiones pueden beneficiarse realmente del uso de IA?
+    \item ¿Qué datos históricos necesita el sistema para generar resultados útiles?
+    \item ¿Qué debe ocurrir cuando la recomendación de la IA no resulta adecuada?
+\end{enumerate}
+
+\textbf{Requisitos o restricciones emergentes:}
+\begin{itemize}
+    \item El componente de IA deberá utilizar datos históricos disponibles para
+    apoyar el pronóstico de demanda de platos.
+    \item Las recomendaciones de la IA deberán considerarse apoyo a la decisión
+    y no sustituir automáticamente la decisión del usuario.
+\end{itemize}
+
+\paragraph{7) Perspectiva de sociedad.}
+
+\textbf{Preguntas de análisis:}
+\begin{enumerate}
+    \item ¿Qué datos personales de los clientes necesita realmente almacenar el sistema?
+    \item ¿Cómo se evitará utilizar información del cliente para fines no relacionados con el servicio?
+    \item ¿Cómo se informará al usuario cuando una recomendación haya sido generada mediante IA?
+\end{enumerate}
+
+\textbf{Requisitos o restricciones emergentes:}
+\begin{itemize}
+    \item El sistema deberá limitar el tratamiento de datos personales a la
+    información necesaria para las funciones definidas.
+    \item Las recomendaciones generadas mediante IA deberán presentarse como
+    sugerencias y no como decisiones obligatorias para el cliente.
+\end{itemize}
+
+\paragraph{8) Perspectiva técnica.}
+
+\textbf{Preguntas de análisis:}
+\begin{enumerate}
+    \item ¿Qué tiempos de respuesta necesita el personal durante la atención?
+    \item ¿Cómo se protegerá el acceso a información administrativa del restaurante?
+    \item ¿Qué mecanismos permitirán recuperar información ante una falla?
+\end{enumerate}
+
+\textbf{Requisitos o restricciones emergentes:}
+\begin{itemize}
+    \item Las operaciones frecuentes de registro y consulta deberán responder
+    con tiempos adecuados para no interrumpir el flujo de atención.
+    \item El sistema deberá controlar el acceso a las funciones según el rol
+    asignado a cada usuario.
+\end{itemize}
