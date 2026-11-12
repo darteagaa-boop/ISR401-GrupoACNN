@@ -1,3 +1,103 @@
 % Responsable: Anthony · Ronda 1 (viernes 13, hasta 21.00)
 % Para cada concepto: (i) definición formal con cita IEEE comprimida, (ii) explicación propia de mínimo 3 oraciones, (iii) ejemplo del Sistema de gestión para un restaurante con IA.
 \subsection{Tipos de sistemas}
+La clasificación de un sistema permite identificar su propósito, su entorno
+de operación y la relación que mantiene con las personas y otros elementos
+externos. En Ingeniería de Requisitos esta caracterización ayuda a establecer
+el alcance del producto y a comprender las necesidades de los stakeholders
+antes de especificar las funciones concretas del software
+\cite{ieee29148,pohl2025}.
+
+\subsubsection{Sistema de información de gestión}
+
+\textbf{(i) Definición formal.}
+Un sistema de información permite registrar, almacenar, procesar y comunicar
+datos con el propósito de apoyar las actividades de una organización. Desde
+la perspectiva de Ingeniería de Requisitos, sus funciones deben responder a
+las necesidades de los stakeholders y al contexto en el que será utilizado
+\cite{ieee29148,pohl2025}.
+
+\textbf{(ii) Explicación propia.}
+Este tipo de sistema trabaja principalmente con información generada durante
+las actividades de una organización. Su objetivo no consiste únicamente en
+guardar datos, sino también en procesarlos para facilitar las operaciones y
+apoyar la toma de decisiones. Por esta razón, sus requisitos deben establecer
+qué información se registra, quién puede utilizarla y qué resultados debe
+proporcionar el sistema.
+
+\textbf{(iii) Aplicación al PFC.}
+El Sistema de gestión para un restaurante con IA desarrollado para
+El Balcón Restaurant, en Quevedo, se clasifica principalmente como un sistema
+de información de gestión. La aplicación registrará y procesará información
+relacionada con pedidos, reservas, menú, inventario, ventas y cierre de caja.
+Estos datos permitirán apoyar las actividades diarias del restaurante y
+servirán también como fuente para las funcionalidades de inteligencia
+artificial definidas en el proyecto.
+
+\subsubsection{Sistema sociotécnico}
+
+\textbf{(i) Definición formal.}
+El análisis de requisitos debe considerar no solamente los componentes de
+software, sino también a las personas, los procesos organizacionales y el
+entorno en el que funcionará el sistema. Esta interacción entre elementos
+humanos y tecnológicos caracteriza a los sistemas sociotécnicos
+\cite{pohl2025,swebok2024}.
+
+\textbf{(ii) Explicación propia.}
+El funcionamiento correcto de una aplicación empresarial no depende
+exclusivamente del código desarrollado. Los usuarios realizan actividades,
+siguen procedimientos y toman decisiones que influyen directamente en los
+resultados obtenidos mediante el sistema. Por ello, durante la Ingeniería de
+Requisitos es necesario comprender tanto la parte tecnológica como la forma
+real en que trabajan las personas dentro de la organización.
+
+\textbf{(iii) Aplicación al PFC.}
+El sistema de El Balcón Restaurant posee una naturaleza sociotécnica porque
+en sus procesos intervienen el propietario, el jefe de cocina, los meseros,
+el cajero y los clientes. Por ejemplo, el mesero registra un pedido, cocina
+recibe la información para preparar los platos y posteriormente el cajero
+utiliza los datos registrados para realizar el cobro. El resultado final
+depende de la interacción entre los usuarios, los procedimientos internos
+del restaurante y la aplicación.
+
+\subsubsection{Sistema con componente de inteligencia artificial}
+
+\textbf{(i) Definición formal.}
+Dentro del proyecto, la inteligencia artificial constituye un componente
+integrado al sistema de información. Las capacidades incorporadas al software
+deben originarse en necesidades identificadas y expresarse mediante requisitos
+que puedan ser documentados y posteriormente validados
+\cite{ieee29148,pohl2025}.
+
+\textbf{(ii) Explicación propia.}
+La incorporación de inteligencia artificial no cambia el propósito principal
+del sistema, que continúa siendo gestionar información y procesos del
+restaurante. La IA utiliza los datos disponibles para generar resultados que
+sirven como apoyo a determinadas decisiones. En este proyecto sus resultados
+se consideran recomendaciones, por lo que las personas mantienen la
+responsabilidad sobre las decisiones finales.
+
+\textbf{(iii) Aplicación al PFC.}
+En El Balcón Restaurant se han definido dos funciones principales de
+inteligencia artificial. La primera permitirá estimar la demanda diaria de
+cada plato utilizando información histórica de ventas, con el objetivo de
+apoyar la planificación de compras de insumos. La segunda permitirá recomendar
+platos a los clientes tomando como referencia sus pedidos anteriores. En ambos
+casos la inteligencia artificial funciona como apoyo y no como sustituto de
+la decisión humana.
+
+\subsubsection{Clasificación del PFC}
+
+De acuerdo con las características identificadas, el proyecto se considera
+principalmente un \textbf{sistema de información de gestión con un componente
+de inteligencia artificial}. También presenta una naturaleza sociotécnica,
+debido a que su funcionamiento depende de la interacción entre el software,
+los usuarios y los procedimientos internos de El Balcón Restaurant.
+
+El sistema no se considera embebido, ya que su función principal no consiste
+en controlar directamente dispositivos físicos. Tampoco se clasifica como un
+sistema crítico de seguridad, puesto que las funciones de inteligencia
+artificial generan estimaciones y recomendaciones que posteriormente son
+evaluadas por las personas responsables. Esta clasificación permite orientar
+los requisitos hacia la gestión de información, la operación del restaurante
+y el apoyo a la toma de decisiones.
