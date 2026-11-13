@@ -1,3 +1,76 @@
-% Responsable: Danela · Ronda 2 (sábado 14, hasta 13.00)
-% Para cada concepto: (i) definición formal con cita IEEE comprimida, (ii) explicación propia de mínimo 3 oraciones, (iii) ejemplo del Sistema de gestión para un restaurante con IA.
+% Responsable: Danela · Ronda 2 (sábado 14, hasta 13:00)
 \subsection{Definición y tipos de requisitos}
+\subsubsection{Requisito}
+
+\textbf{Definición:} Un requisito es un enunciado que expresa una necesidad junto con las restricciones y condiciones que la acompañan \cite[\nopp cl.~3.1.19]{ieee29148}. El IREB distingue sentidos del término, una necesidad percibida por un stakeholder, una capacidad o propiedad que el sistema debe tener, y la representación documentada de cualquiera de las dos \cite{ireb31}.
+
+\textbf{Explicación:} Un requisito no es solo una función deseada, sino una necesidad expresada de forma que el equipo pueda construirla y comprobarla. Por eso la definición incluye las condiciones y restricciones, que dicen cuándo y cómo se aplica. Distinguir los tres sentidos del IREB ayuda a entender que una necesidad que solo existe en la cabeza del cliente todavía no es un requisito documentado.
+
+\textbf{Ejemplo en El Balcón Restaurant:} El propietario necesita saber qué insumos comprar cada día. Esa necesidad se convierte en un requisito cuando se documenta, por ejemplo: “El sistema deberá sugerir la lista de compras del día siguiente a partir de la demanda estimada de cada plato”.
+
+\subsubsection{Stakeholder}
+
+\textbf{Definición:} Un stakeholder es una persona u organización que tiene un derecho, una participación o un interés en el sistema que este satisfaga sus necesidades y expectativas \cite[\nopp cl.~3.1.28]{ieee29148}.
+
+\textbf{Explicación:} Los requisitos nacen de los stakeholders, por lo que identificarlos es el primer paso del proceso. No todos son usuarios del sistema, porque también cuentan quienes lo financian o lo regulan. Olvidar a un stakeholder suele significar olvidar los requisitos que solo él conoce.
+
+\textbf{Ejemplo en El Balcón Restaurant:} Además de los meseros y clientes, el SRI es un stakeholder de El Balcón Restaurant aunque nunca use el sistema, sus normas de facturación electrónica imponen requisitos (Sección 0).
+
+\subsubsection{Restricción}
+
+\textbf{Definición:} Una restricción es una limitación impuesta desde fuera sobre el sistema, su diseño, su implementación o el proceso con el que se desarrolla \cite[\nopp cl.~3.1.7]{ieee29148}.
+
+\textbf{Explicación:} A diferencia de un requisito funcional, una restricción no describe lo que el sistema hace, sino los límites dentro de los cuales debe construirse. Suele venir de leyes, presupuestos, tecnologías existentes o decisiones del cliente. Reconocerla a tiempo evita diseñar soluciones que luego no se pueden usar.
+
+\textbf{Ejemplo en El Balcón Restaurant:} El restaurante ya usa tablets Android para tomar pedidos, por lo que una restricción es que la aplicación de los meseros funcione en esos dispositivos.
+
+\subsubsection{Requisitos de producto y requisitos de proceso}
+
+\textbf{Definición:} La norma describe los requisitos de proceso como exigencias de los stakeholders, normalmente del usuario, impuestas mediante el contrato o el cumplimiento de leyes o directivas de trabajo \cite[\nopp cl.~5.2.8.3]{ieee29148}. Los requisitos de producto, en cambio, describen lo que debe hacer o cumplir el sistema.
+
+\textbf{Explicación:} La diferencia está en el objeto del requisito, del producto que se entrega o la forma de construirlo. Un requisito de producto se verifica probando el sistema, mientras que uno de proceso se verifica revisando cómo se trabajó. Mezclarlos en la misma lista confunde las pruebas, por eso conviene identificar su tipo desde el inicio.
+
+\textbf{Ejemplo en El Balcón Restaurant:} “El sistema deberá registrar el cierre de caja diario” es un requisito de producto. “Cada entrega se validará con el propietario antes de instalarse en el restaurante” es un requisito de proceso.
+
+\subsubsection{Tipos de requisitos}
+
+\textbf{Definición:} La norma recomienda registrar el tipo de cada requisito como un atributo, porque los requisitos varían en su intención y en las propiedades que representan, e incluye como ejemplo los tipos funcional y de rendimiento, de interfaz, de proceso, no funcional, de usabilidad y de factores humanos \cite[\nopp cl.~5.2.8.3]{ieee29148}. El IREB y Pohl agrupan los requisitos en funcionales, de calidad y restricciones \cite{pohl2025,ireb31}.
+
+\textbf{Explicación:} Clasificar los requisitos por tipo permite repartirlos, analizarlos y verificarlos con la técnica adecuada para cada uno. Las dos clasificaciones no se contradicen, porque la del IREB es más general y la de la norma detalla subtipos. En el sistema del restaurante se usarán ambas, la del IREB para la clasificación principal y la de la norma para el atributo de tipo de cada requisito.
+
+\textbf{Ejemplo en El Balcón Restaurant:} La siguiente tabla muestra un ejemplo de cada tipo.
+
+\begin{table}[H]
+\centering\footnotesize
+\caption{Tipos de requisitos según IEEE 29148 con ejemplos en El Balcón Restaurant}\label{tab:tipos-requisitos}
+\begin{tabularx}{\textwidth}{@{}p{0.22\textwidth}Yp{0.36\textwidth}@{}}
+\toprule
+\textbf{Tipo según IEEE 29148} & \textbf{Qué expresa} & \textbf{Ejemplo en El Balcón Restaurant}\\
+\midrule
+\textbf{Funcional / rendimiento} & Funciones o tareas que realiza el sistema, y qué tan bien las realiza & El sistema enviará cada pedido de mesa a la pantalla de cocina\\
+\textbf{Interfaz} & Cómo interactúa el sistema con sistemas externos o entre sus elementos & Conexión con el sistema de facturación electrónica del SRI\\
+\textbf{Proceso} & Exigencias sobre cómo se desarrolla el sistema, impuestas por contrato, leyes o políticas & El propietario aprobará cada entrega antes de pasar a producción\\
+\textbf{Calidad (no funcional)} & Propiedades como seguridad, fiabilidad o mantenibilidad, con sus medidas & Disponibilidad del sistema durante el horario de atención\\
+\textbf{Usabilidad / calidad en uso} & Eficacia, eficiencia y satisfacción del usuario en su contexto de uso & Un mesero nuevo registra un pedido sin capacitación previa\\
+\textbf{Factores humanos} & Resultados de la interacción con las personas, como seguridad o bienestar & Pantallas legibles en la cocina, con calor y poca distancia de lectura\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsubsection{Glosario de términos base}\mbox{}
+
+\begin{table}[H]
+\centering\footnotesize
+\caption{Glosario de términos base}\label{tab:glosario}
+\begin{tabularx}{\textwidth}{@{}p{0.22\textwidth}Yp{0.14\textwidth}@{}}
+\toprule
+\textbf{Término} & \textbf{Definición en la norma} & \textbf{Cláusula}\\
+\midrule
+\textbf{Requisito} & Enunciado que traduce o expresa una necesidad junto con sus restricciones y condiciones asociadas & \cite[\nopp cl.~3.1.19]{ieee29148}\\
+\textbf{Stakeholder} & Persona u organización con un derecho, participación, reclamo o interés en el sistema o en que cumpla sus necesidades & \cite[\nopp cl.~3.1.28]{ieee29148}\\
+\textbf{Restricción} & Limitación impuesta desde fuera sobre el sistema, su diseño, su implementación o su proceso de desarrollo & \cite[\nopp cl.~3.1.7]{ieee29148}\\
+\textbf{Verificación} & Confirmación con evidencia objetiva de que se cumplieron los requisitos especificados & \cite[\nopp cl.~3.1.37]{ieee29148}\\
+\textbf{Validación} & Confirmación con evidencia objetiva de que se cumplieron los requisitos para el uso previsto & \cite[\nopp cl.~3.1.36]{ieee29148}\\
+\bottomrule
+\end{tabularx}
+\end{table}
