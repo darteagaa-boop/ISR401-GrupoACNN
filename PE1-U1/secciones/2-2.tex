@@ -1,3 +1,33 @@
-% Responsable: Danela · Ronda 3 (sábado 14, hasta 21.00)
-% Para cada concepto: (i) definición formal con cita IEEE comprimida, (ii) explicación propia de mínimo 3 oraciones, (iii) ejemplo del Sistema de gestión para un restaurante con IA.
+% Responsable: Danela · Ronda 3 (sábado 14, hasta 21:00)
 \subsection{Requisitos funcionales y no funcionales}
+\subsubsection{Requisito funcional}
+
+\textbf{Definición:} Los requisitos funcionales describen las funciones o tareas que debe realizar el sistema o uno de sus elementos \cite[\nopp cl.~5.2.8.3]{ieee29148}.
+
+\textbf{Explicación:} Un requisito funcional responde a la pregunta de qué hace el sistema. Se expresa con una acción observable que se puede probar con un caso de uso o un escenario, si se elimina un requisito funcional, el sistema pierde una capacidad concreta.
+
+\textbf{Ejemplo en El Balcón Restaurant:} “Cuando el mesero confirme un pedido, el sistema deberá enviarlo a la pantalla de cocina” es un requisito funcional de El Balcón Restaurant.
+
+\subsubsection{Requisito no funcional o de calidad}
+
+\textbf{Definición:} Los requisitos de calidad, también llamados no funcionales, expresan propiedades como la fiabilidad, la mantenibilidad o la seguridad, y deben incluir sus medidas cuando corresponda \cite[\nopp cl.~5.2.8.3]{ieee29148}. Para clasificarlos se usa el modelo de calidad de producto de ISO/IEC 25010:2023 \cite{iso25010}. Glinz señala que el término “no funcional” se usa de forma poco precisa y propone tratarlos según la propiedad que expresan \cite{glinz2007}.
+
+\textbf{Explicación:} Un requisito no funcional responde a la pregunta de qué tan bien hace el sistema lo que hace. Por eso no agrega funciones, sino que pone condiciones de calidad sobre las funciones existentes. Si no se cuantifica, queda abierto a interpretaciones y no se puede verificar.
+
+\textbf{Ejemplo en El Balcón Restaurant:} “El sistema debe ser rápido” no es verificable. Su versión cuantificada sería: “El 95 \% de los pedidos deberá aparecer en la pantalla de cocina en 3 segundos o menos desde que el mesero los confirma”.
+
+\subsubsection{Requisito de rendimiento}
+
+\textbf{Definición:} La norma considera el rendimiento como un atributo de una función, que normalmente se expresa de forma cuantitativa, y advierte que un requisito de rendimiento por sí solo es incompleto \cite[\nopp cl.~5.2.8.3]{ieee29148}.
+
+\textbf{Explicación:} Un requisito de rendimiento siempre se refiere a una función concreta, porque mide qué tan rápido o cuánto la realiza. Por eso debe redactarse ligado a esa función y no de forma aislada, porque expresarlo con números permite comprobarlo con pruebas de carga o mediciones.
+
+\textbf{Ejemplo en El Balcón Restaurant:} El requisito de los 3 segundos de la cocina está ligado a la función de enviar pedidos. Otro ejemplo es que la sugerencia de compras de la IA se genere antes de las 22:00, al cerrar la cena.
+
+\subsubsection{Diferencia entre funcional y no funcional y su lugar en el ERS}
+
+\textbf{Definición:} En la especificación de requisitos de software, la norma organiza los requisitos especificados en interfaces externas, funciones, usabilidad, rendimiento, base de datos lógica, restricciones de diseño, cumplimiento de estándares y atributos del sistema de software \cite[\nopp cl.~9.6.10–9.6.18]{ieee29148}, y dedica un apartado a la verificación de cada requisito \cite[\nopp cl.~9.6.19]{ieee29148}.
+
+\textbf{Explicación:} La estructura del ERS muestra que los requisitos funcionales y los no funcionales se documentan por separado, pero se relacionan entre sí. Los atributos de calidad como fiabilidad, disponibilidad o seguridad se especifican aparte para que cada uno tenga su medida.
+
+\textbf{Ejemplo en El Balcón Restaurant:} En el ERS de El Balcón Restaurant, el envío de pedidos a cocina va en funciones, el tiempo de 3 segundos en rendimiento, la conexión con el SRI en interfaces externas y la protección de los datos de los clientes en atributos del sistema. En verificación se indicaría, por ejemplo, que el tiempo se mide con 100 pedidos de prueba.
