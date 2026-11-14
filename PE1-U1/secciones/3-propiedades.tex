@@ -1,3 +1,71 @@
-% Responsable: Danela · Adicional de la rúbrica · Ronda 4 (domingo 15, hasta 15.00)
-% Rúbrica C2: evaluar cada uno de los 15 requisitos con las propiedades de IEEE 29148 (necesario, no ambiguo, verificable, trazable, etc.) con argumentación verificable.
+% Responsable: Danela · Ronda 4 (domingo 15)
 \subsection{Evaluación de los requisitos con las propiedades de IEEE 29148}
+Cada uno de los 15 requisitos de la tabla de requisitos se evaluó con las nueve características de un requisito individual que establece la norma: necesario, apropiado, no ambiguo, completo, singular, factible, verificable, correcto y conforme \cite[\nopp cl.~5.2.5]{ieee29148}. Se agregó la trazabilidad, que se cumple cuando el requisito tiene un identificador único y una fuente, porque la norma indica que los identificadores únicos facilitan el rastreo de los requisitos \cite[\nopp cl.~5.2.8.2]{ieee29148}. Cabe señalar que un requisito se considera mejorable cuando falla en al menos una propiedad.
+
+La tabla de requisitos corresponde a la primera versión especificada. Las versiones mejoradas de esta sección la reemplazan para las siguientes etapas del proyecto.
+
+\subsubsection{Matriz de evaluación}\mbox{}
+
+\begin{table}[H]
+\centering\footnotesize
+\caption{Matriz de evaluación de los requisitos con IEEE 29148}\label{tab:matriz-propiedades}
+\begin{tabular}{@{}lccccccccccl@{}}
+\toprule
+\textbf{\textbf{ID}} & \rotatebox{90}{\textbf{\textbf{Necesario}}} & \rotatebox{90}{\textbf{\textbf{Apropiado}}} & \rotatebox{90}{\textbf{\textbf{No ambiguo}}} & \rotatebox{90}{\textbf{\textbf{Completo}}} & \rotatebox{90}{\textbf{\textbf{Singular}}} & \rotatebox{90}{\textbf{\textbf{Factible}}} & \rotatebox{90}{\textbf{\textbf{Verificable}}} & \rotatebox{90}{\textbf{\textbf{Correcto}}} & \rotatebox{90}{\textbf{\textbf{Conforme}}} & \rotatebox{90}{\textbf{\textbf{Trazable}}} & \rotatebox{90}{\textbf{\textbf{Resultado}}}\\
+\midrule
+\textbf{\textbf{RN-01}} & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & Mejorable\\
+\textbf{\textbf{RS-01}} & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & Cumple\\
+\textbf{\textbf{RU-01}} & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & Cumple\\
+\textbf{\textbf{RF-01}} & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & Cumple\\
+\textbf{\textbf{RF-02}} & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & Mejorable\\
+\textbf{\textbf{RF-03}} & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & Cumple\\
+\textbf{\textbf{RNF-01}} & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & Cumple\\
+\textbf{\textbf{RNF-02}} & 1 & 0 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & Mejorable\\
+\textbf{\textbf{RNF-03}} & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & Cumple\\
+\textbf{\textbf{RNF-04}} & 1 & 0 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & Mejorable\\
+\textbf{\textbf{RNF-05}} & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & Cumple\\
+\textbf{\textbf{RI-01}} & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & Mejorable\\
+\textbf{\textbf{RI-02}} & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & Mejorable\\
+\textbf{\textbf{RC-01}} & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 0 & 1 & 1 & Mejorable\\
+\textbf{\textbf{RCF-01}} & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & Mejorable\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\emph{1 = cumple la propiedad y 0 = no la cumple, como resultado: 7 requisitos cumplen y 8 son mejorables.}
+
+\subsubsection{Argumentación y versiones mejoradas}\mbox{}
+
+{\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}L{0.07\textwidth}L{0.15\textwidth}L{0.38\textwidth}L{0.36\textwidth}@{}}
+\caption{Argumentación y versiones mejoradas de los requisitos}\label{tab:mejorados}\\
+\toprule
+\textbf{\textbf{ID}} & \textbf{\textbf{Propiedad afectada}} & \textbf{\textbf{Argumento}} & \textbf{\textbf{Versión mejorada}}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{\textbf{ID}} & \textbf{\textbf{Propiedad afectada}} & \textbf{\textbf{Argumento}} & \textbf{\textbf{Versión mejorada}}\\
+\midrule
+\endhead
+\midrule
+\multicolumn{4}{r@{}}{\emph{Continúa en la página siguiente}}\\
+\endfoot
+\bottomrule
+\endlastfoot
+\textbf{\textbf{RN-01}} & Completo \cite[\nopp cl.~5.2.5]{ieee29148} & La meta de reducir las mermas en un 15 \% no indica respecto de qué valor se mide, y hoy el restaurante no registra sus mermas porque controla el inventario en papel. & Reducir en al menos 15 \% las mermas de insumos de El Balcón en seis meses de operación, respecto del valor registrado por el sistema durante el primer mes de uso.\\
+\textbf{\textbf{RF-02}} & Correcto \cite[\nopp cl.~5.2.5]{ieee29148} & Pide un pronóstico semanal, pero la necesidad descrita en la Sección 0 es estimar la demanda diaria para sugerir las compras del día siguiente. El requisito no representa con exactitud la necesidad de origen. & Mientras exista un historial de ventas de al menos 30 días, el sistema deberá generar cada día, antes de las 22:00, el pronóstico de demanda del día siguiente por plato.\\
+\textbf{\textbf{RNF-02}} & Singular y apropiado \cite[\nopp cl.~5.2.5]{ieee29148} & Reúne dos capacidades distintas, el control de acceso por rol y la autenticación, y al exigir contraseña impone una solución de diseño que no corresponde a este nivel. & RNF-02a: El sistema deberá permitir a cada usuario solo las funciones de su rol (mesero, cocina, cajero o administrador). RNF-02b: El sistema deberá autenticar a cada usuario antes de darle acceso a cualquier función.\\
+\textbf{\textbf{RNF-04}} & Apropiado y verificable \cite[\nopp cl.~5.2.5]{ieee29148}, \cite[\nopp cl.~5.2.4]{ieee29148} & Describe una capacidad del mesero y no del sistema, y no indica a cuántos meseros se mide, por lo que el resultado depende de una sola persona. & El sistema deberá permitir que al menos el 90 \% de los meseros nuevos complete un pedido sin ayuda, después de una capacitación de 30 minutos como máximo.\\
+\textbf{\textbf{RI-01}} & No ambiguo \cite[\nopp cl.~5.2.5]{ieee29148}, \cite[\nopp cl.~5.2.7]{ieee29148} & La conexión “por red local o USB” usa una “o” que admite dos interpretaciones: que el sistema soporte ambas conexiones o solo una de ellas. & El sistema deberá imprimir las comandas en la impresora térmica de cocina conectada por red local.\\
+\textbf{\textbf{RI-02}} & Singular \cite[\nopp cl.~5.2.5]{ieee29148} & Une con “y” dos acciones distintas, enviar el comprobante y registrar la autorización, que se verifican por separado. & RI-02: El sistema deberá enviar cada comprobante electrónico al servicio web del SRI.\\
+\textbf{\textbf{RC-01}} & Singular y correcto \cite[\nopp cl.~5.2.5]{ieee29148} & Junta una restricción tecnológica y una de plazo. Además, exige entregar el sistema en funcionamiento, lo que contradice la introducción de la tabla de requisitos, que aclara que es una propuesta académica que no se instala en el restaurante. & RC-01: El sistema deberá desarrollarse con herramientas de licencia libre.\\
+\textbf{\textbf{RCF-01}} & Verificable \cite[\nopp cl.~5.2.5]{ieee29148} & “Conforme a la ley” es demasiado amplio para comprobarlo con una prueba, porque no indica qué obligaciones concretas debe cumplir el sistema. & El sistema deberá registrar el consentimiento del cliente antes de guardar sus datos personales y permitir eliminarlos cuando el cliente lo solicite, conforme a la Ley Orgánica de Protección de Datos Personales.\\
+\end{longtable}
+}
+
+\subsubsection{Evaluación del conjunto de requisitos}\mbox{}
+
+Como conjunto, los requisitos no tienen pendientes por definir, cubren nueve tipos distintos y todos tienen identificador único y fuente, lo que los hace trazables. Sin embargo, el conjunto no es completamente consistente \cite[\nopp cl.~5.2.6]{ieee29148}, porque RF-02 habla de un pronóstico semanal mientras la descripción del sistema habla de una estimación diaria, y RC-01 exige entregar el sistema en funcionamiento cuando el alcance lo define como una propuesta académica. Con las versiones mejoradas, ambos conflictos quedan resueltos.
+
+Los problemas más frecuentes fueron juntar dos capacidades en un mismo requisito, describir lo que hace el usuario en lugar de lo que hace el sistema y usar expresiones demasiado amplias para poder verificarlas, como “conforme a la ley”.
