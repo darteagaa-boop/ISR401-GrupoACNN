@@ -88,7 +88,7 @@ pdfLaTeX y compilar. Overleaf ejecuta `biber` automáticamente.
 ### Compilar PE1-U1
 
 Se usan el mismo compilador, el mismo orden de comandos y las mismas dependencias,
-desde la carpeta `PE1-U1`. Además requiere el paquete `graphicx` para las figuras.
+desde la carpeta `PE1-U1`. Además requiere los paquetes `graphicx` para las figuras y `pdflscape` para la página horizontal del mapa conceptual.
 
 ```bash
 cd PE1-U1
