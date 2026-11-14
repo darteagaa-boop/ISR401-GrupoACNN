@@ -1,3 +1,94 @@
-% Responsable: Danela · Adicional de la rúbrica · borrador en Ronda 3, cierre en Ronda 4
-% Rúbrica C4: secuencia del proceso (elicitación, análisis, especificación y validación) con los artefactos parciales del sistema, enlazando las secciones del grupo.
+% Responsable: Danela · Ronda 4 (domingo 15)
 \subsection{Aplicación del proceso de requisitos}
+La ingeniería de requisitos comprende descubrir, obtener, desarrollar, analizar, verificar, validar, comunicar, documentar y gestionar los requisitos \cite[\nopp cl.~3.1.21]{ieee29148}. Para El Balcón Restaurant, el proceso se aplicó en cuatro actividades sucesivas: elicitación, análisis, especificación y validación. Cada actividad produjo un artefacto parcial que sirve de entrada a la siguiente, siguiendo los procesos de definición de necesidades y requisitos de los stakeholders \cite[\nopp cl.~6.3]{ieee29148} y de definición de requisitos del sistema \cite[\nopp cl.~6.4]{ieee29148}.
+
+{\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}L{0.13\textwidth}L{0.38\textwidth}L{0.25\textwidth}L{0.20\textwidth}@{}}
+\caption{Secuencia del proceso de requisitos aplicada a El Balcón Restaurant}\label{tab:secuencia-proceso}\\
+\toprule
+\textbf{\textbf{Actividad}} & \textbf{\textbf{Qué se hizo para El Balcón Restaurant}} & \textbf{\textbf{Artefacto parcial}} & \textbf{\textbf{Dónde está en el informe}}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{\textbf{Actividad}} & \textbf{\textbf{Qué se hizo para El Balcón Restaurant}} & \textbf{\textbf{Artefacto parcial}} & \textbf{\textbf{Dónde está en el informe}}\\
+\midrule
+\endhead
+\midrule
+\multicolumn{4}{r@{}}{\emph{Continúa en la página siguiente}}\\
+\endfoot
+\bottomrule
+\endlastfoot
+\textbf{\textbf{1. Elicitación}} & Se identificaron los stakeholders y se clasificaron por poder e interés. Se definió el límite del sistema con sus entidades externas y se analizaron las ocho perspectivas de contexto. Se preparó una guía de entrevista para el propietario y el jefe de cocina. & Tabla de stakeholders y matriz de poder e interés, tabla de entidades externas, perspectivas de contexto y guía de entrevista & Sección 0, contexto del sistema y Tabla de guía de entrevista\\
+\textbf{\textbf{2. Análisis}} & Las necesidades se clasificaron por tipo de requisito y se priorizaron con MoSCoW. Se revisó la coherencia entre las necesidades y los requisitos para detectar conflictos. & Clasificación por tipo y prioridad MoSCoW & Tabla de requisitos\\
+\textbf{\textbf{3. Especificación}} & Se redactaron 15 requisitos únicos con identificador, tipo, descripción, prioridad y fuente. Los funcionales se escribieron con la sintaxis EARS y los no funcionales se cuantificaron con ISO/IEC 25010:2023. & Tabla de 15 requisitos con sus atributos & Tabla de requisitos\\
+\textbf{\textbf{4. Validación}} & Se verificó cada requisito con las propiedades de IEEE 29148 y se encontraron 8 mejorables, que se corrigieron. Se trazó cada requisito hasta su necesidad de origen y su forma de verificación. Queda planificada la revisión de las versiones mejoradas con el propietario. & Matriz de evaluación, versiones mejoradas y matriz de trazabilidad & Evaluación de los requisitos y Tabla de trazabilidad\\
+\end{longtable}
+}
+
+\subsubsection{Elicitación}
+
+Según la norma, la obtención de requisitos usa técnicas sistemáticas para identificar y documentar las necesidades del cliente y de los usuarios finales \cite[\nopp cl.~3.1.20]{ieee29148}. En El Balcón Restaurant, el proceso partió de los stakeholders identificados en la Sección 0 y se inició con una visita el viernes 6 de noviembre de 2026, durante la cual se mantuvo una entrevista con el propietario del establecimiento. Además, se observaron algunos de los procesos que se llevan a cabo en el restaurante, como la gestión de pedidos y otras actividades relacionadas con su funcionamiento. Estas actividades permitieron conocer mejor las necesidades del negocio y comprender cómo se desarrollan sus operaciones. El consentimiento para la recopilación de información se firmó el mismo día de la visita. A partir de la información obtenida, se preparó la siguiente guía de entrevista para profundizar en las necesidades del establecimiento, en la que cada pregunta se relaciona con los requisitos que permite confirmar.
+
+{\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}L{0.05\textwidth}L{0.48\textwidth}L{0.22\textwidth}L{0.21\textwidth}@{}}
+\caption{Guía de entrevista para la elicitación}\label{tab:guia-entrevista}\\
+\toprule
+\textbf{\textbf{N.º}} & \textbf{\textbf{Pregunta}} & \textbf{\textbf{Stakeholder}} & \textbf{\textbf{Requisitos relacionados}}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{\textbf{N.º}} & \textbf{\textbf{Pregunta}} & \textbf{\textbf{Stakeholder}} & \textbf{\textbf{Requisitos relacionados}}\\
+\midrule
+\endhead
+\midrule
+\multicolumn{4}{r@{}}{\emph{Continúa en la página siguiente}}\\
+\endfoot
+\bottomrule
+\endlastfoot
+\textbf{\textbf{1}} & ¿Qué problemas causa hoy registrar los pedidos en papel? & Propietario y personal de servicio & RU-01, RF-01\\
+\textbf{\textbf{2}} & ¿Cómo se decide qué insumos comprar cada día y cuánto se desperdicia? & Propietario y jefe de cocina & RN-01, RF-02\\
+\textbf{\textbf{3}} & ¿Cuánto tiempo puede esperar un pedido antes de llegar a cocina en hora pico? & Jefe de cocina & RF-01, RNF-01\\
+\textbf{\textbf{4}} & ¿Qué hace hoy el cajero cuando un pago con tarjeta es rechazado? & Personal de servicio & RF-03\\
+\textbf{\textbf{5}} & ¿Qué datos de los clientes se guardan y cómo se pide su autorización? & Propietario & RCF-01\\
+\textbf{\textbf{6}} & ¿Qué dispositivos tiene el restaurante y cómo emite hoy sus comprobantes al SRI? & Propietario & RI-01, RI-02, RC-01\\
+\end{longtable}
+}
+
+\subsubsection{Análisis y especificación}
+
+Durante el análisis, las necesidades obtenidas se clasificaron por tipo y se priorizaron con MoSCoW, de modo que las funciones críticas para la operación diaria, como el envío de pedidos a cocina, quedaran como obligatorias. Luego se especificaron 15 requisitos con los atributos que recomienda la norma, como identificador único, tipo, prioridad y fuente \cite[\nopp cl.~5.2.8.2]{ieee29148}. El análisis también permitió detectar conflictos entre la descripción del sistema y algunos requisitos, que se resolvieron en la validación.
+
+\subsubsection{Validación y trazabilidad}
+
+La verificación de requisitos confirma que los requisitos están bien formados \cite[\nopp cl.~3.1.26]{ieee29148}, mientras que la validación busca evidencia objetiva de que el sistema cumplirá los objetivos del negocio y los requisitos de los stakeholders en su entorno de uso \cite[\nopp cl.~6.5.3]{ieee29148}. En esta práctica, la verificación se hizo con la evaluación de propiedades, que encontró 8 requisitos mejorables y produjo sus versiones corregidas. La validación con el propietario queda planificada como siguiente paso, revisando con él las versiones mejoradas.
+
+Además, se construyó una matriz de trazabilidad que enlaza cada necesidad con su stakeholder, sus requisitos y su forma de verificación. La trazabilidad de requisitos consiste en identificar y documentar de dónde se deriva cada requisito y a qué requisitos se asigna dentro del conjunto \cite[\nopp cl.~3.1.23]{ieee29148}.
+
+{\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}L{0.24\textwidth}L{0.16\textwidth}L{0.17\textwidth}L{0.39\textwidth}@{}}
+\caption{Matriz de trazabilidad de requisitos}\label{tab:trazabilidad}\\
+\toprule
+\textbf{\textbf{Necesidad de origen}} & \textbf{\textbf{Stakeholder}} & \textbf{\textbf{Requisito}} & \textbf{\textbf{Forma de verificación}}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{\textbf{Necesidad de origen}} & \textbf{\textbf{Stakeholder}} & \textbf{\textbf{Requisito}} & \textbf{\textbf{Forma de verificación}}\\
+\midrule
+\endhead
+\midrule
+\multicolumn{4}{r@{}}{\emph{Continúa en la página siguiente}}\\
+\endfoot
+\bottomrule
+\endlastfoot
+\textbf{\textbf{Reducir el desperdicio de insumos}} & S1 Propietario & RN-01, RF-02, RNF-05 & Comparar las mermas del sexto mes con las del primer mes y medir el MAPE del pronóstico\\
+\textbf{\textbf{Que los pedidos lleguen rápido a cocina}} & S2 Jefe de cocina & RS-01, RF-01, RNF-01 & Medir el tiempo desde la confirmación del pedido hasta su aparición en la pantalla de cocina\\
+\textbf{\textbf{Registrar pedidos sin demoras en hora pico}} & S3 Personal de servicio & RU-01, RNF-04 & Cronometrar el registro de un pedido con meseros nuevos\\
+\textbf{\textbf{Cobrar sin perder cuentas por pagos rechazados}} & S3 Personal de servicio & RF-03 & Simular un pago rechazado y comprobar que la cuenta sigue abierta\\
+\textbf{\textbf{Emitir comprobantes válidos}} & S5 SRI & RI-02 & Enviar un comprobante de prueba y comprobar que se registra la autorización\\
+\end{longtable}
+}
+
+El proceso no fue estrictamente lineal ya que la validación detectó fallas que obligaron a volver a la especificación, como el pronóstico semanal de RF-02, que se cambió por uno diario para coincidir con la necesidad del propietario, esta retroalimentación entre actividades es la que permite que los requisitos lleguen bien formados al diseño del sistema.
