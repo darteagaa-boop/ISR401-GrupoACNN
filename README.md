@@ -17,7 +17,7 @@ Docente: Gleiston Cicerón Guerrero Ulloa, PhD.
 | Carpeta | Actividad | Archivo principal |
 |---|---|---|
 | `FORM-PC-01/` | Comparación de modelos de proceso de requisitos en escenarios reales | `FORM-PC-01/main.tex` |
-| `PE1-U1/` | Práctica experimental 1: Ingeniería de Requisitos y Proceso de Requisitos aplicados al Sistema de gestión para un restaurante con IA | `PE1-U1/main.tex` |
+| `GA-SUM-01/` | Práctica experimental 1: Ingeniería de Requisitos y Proceso de Requisitos aplicados al Sistema de gestión para un restaurante con IA | `GA-SUM-01/main.tex` |
 
 Estructura de `FORM-PC-01/`:
 
@@ -36,7 +36,7 @@ Estructura de `FORM-PC-01/`:
 | `secciones/matriz.tex` | Matriz escenario por modelo (cada integrante llena su fila) | Todos |
 | `secciones/framework-pohl.tex` | Framework de Pohl aplicado al GAD | Danela |
 
-Estructura de `PE1-U1/` (integrantes: Arteaga Alava Danela Dayana, Chavarría Cuenca Tahiny Mel y Naranjo Alfonzo Anthony Alexander):
+Estructura de `GA-SUM-01/` (integrantes: Arteaga Alava Danela Dayana, Chavarría Cuenca Tahiny Mel y Naranjo Alfonzo Anthony Alexander):
 
 | Archivo | Contenido | Responsable |
 |---|---|---|
@@ -85,17 +85,17 @@ El resultado es `FORM-PC-01/main.pdf`.
 En Overleaf: subir la carpeta `FORM-PC-01` completa, elegir el compilador
 pdfLaTeX y compilar. Overleaf ejecuta `biber` automáticamente.
 
-### Compilar PE1-U1
+### Compilar GA-SUM-01
 
 Se usan el mismo compilador, el mismo orden de comandos y las mismas dependencias,
-desde la carpeta `PE1-U1`. Además requiere los paquetes `graphicx` para las figuras y `pdflscape` para la página horizontal del mapa conceptual.
+desde la carpeta `GA-SUM-01`. Además requiere los paquetes `graphicx` para las figuras y `pdflscape` para la página horizontal del mapa conceptual.
 
 ```bash
-cd PE1-U1
+cd GA-SUM-01
 pdflatex main.tex
 biber main
 pdflatex main.tex
 pdflatex main.tex
 ```
 
-El resultado es `PE1-U1/main.pdf`.
+El resultado es `GA-SUM-01/main.pdf`.
