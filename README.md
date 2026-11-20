@@ -18,6 +18,7 @@ Docente: Gleiston Cicerón Guerrero Ulloa, PhD.
 |---|---|---|
 | `FORM-PC-01/` | Comparación de modelos de proceso de requisitos en escenarios reales | `FORM-PC-01/main.tex` |
 | `GA-SUM-01/` | Práctica experimental 1: Ingeniería de Requisitos y Proceso de Requisitos aplicados al Sistema de gestión para un restaurante con IA | `GA-SUM-01/main.tex` |
+| `GA/TL-02/` | GA-TL-02: taller de entrevista estructurada y design thinking aplicados al PFC (formativa) | `GA/TL-02/main.tex` |
 
 Estructura de `FORM-PC-01/`:
 
@@ -55,6 +56,20 @@ Estructura de `GA-SUM-01/` (integrantes: Arteaga Alava Danela Dayana, Chavarría
 | `secciones/conclusiones.tex` | Cinco conclusiones | Todos |
 | `secciones/anexo-a.tex`, `secciones/anexo-b.tex` | Anexos A y B | Danela |
 | `secciones/declaracion-ia.tex` | Declaración de uso de IA | Todos |
+
+Estructura de `GA/TL-02/` (integrantes: Arteaga Alava Danela Dayana, Chavarría Cuenca Tahiny Mel y Naranjo Alfonzo Anthony Alexander):
+
+| Archivo | Contenido | Responsable |
+|---|---|---|
+| `main.tex`, `referencias.bib` | Documento principal y referencias | Danela |
+| `secciones/guion-apertura.tex`, `secciones/guion-cierre.tex` | Apertura, bloque 1 y cierre del guion | Danela |
+| `secciones/guion-bloques.tex` | Bloques 2 y 3 del guion | Tahiny |
+| `secciones/consentimiento.tex` | Protocolo de consentimiento informado | Anthony |
+| `secciones/ensayo.tex` | Datos y registro del ensayo virtual | Tahiny y Danela |
+| `secciones/mapa-empatia.tex` | Mapa de empatía | Tahiny |
+| `secciones/definicion-problema.tex` | Definición del problema | Anthony |
+| `secciones/ajustes.tex` | Ajustes al guion | Anthony |
+| `evidencias/MANIFIESTO.md` | Manifiesto del audio del ensayo (el audio no se publica) | Danela |
 
 ## Cómo compilar
 
@@ -99,3 +114,17 @@ pdflatex main.tex
 ```
 
 El resultado es `GA-SUM-01/main.pdf`.
+
+### Compilar GA-TL-02
+
+Se usan el mismo compilador, el mismo orden de comandos y las mismas dependencias, desde la carpeta `GA/TL-02`:
+
+```bash
+cd GA/TL-02
+pdflatex main.tex
+biber main
+pdflatex main.tex
+pdflatex main.tex
+```
+
+El resultado es `GA/TL-02/main.pdf`.

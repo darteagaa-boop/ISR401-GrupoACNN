@@ -1,0 +1,77 @@
+\documentclass[conference,onecolumn]{IEEEtran}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{csquotes}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+\usepackage[backend=biber,style=ieee,sorting=none]{biblatex}
+\addbibresource{referencias.bib}
+\AtBeginDocument{\spanishplainpercent}
+
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\renewcommand{\IEEEkeywordsname}{Palabras clave}
+
+\title{GA-TL-02: Taller de entrevista estructurada y design thinking aplicados al PFC}
+\author{\IEEEauthorblockN{Arteaga Alava Danela Dayana, Chavarría Cuenca Tahiny Mel,\\
+Naranjo Alfonzo Anthony Alexander}
+\IEEEauthorblockA{Grupo ACNN · Carrera de Software\\
+Facultad de Ciencias de la Computación\\
+Universidad Técnica Estatal de Quevedo, Ecuador\\
+Ingeniería de Requerimientos -- ISR-401}}
+
+\begin{document}
+\maketitle
+
+\section*{Datos generales}
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabularx}{\textwidth}{@{}p{0.22\textwidth}Y@{}}
+\toprule
+\textbf{Campo} & \textbf{Detalle}\\
+\midrule
+Asignatura & Ingeniería de Requerimientos (ISR-401) · 4.\textsuperscript{o} nivel · Paralelo B\\
+Actividad & GA-TL-02 · Taller de entrevista estructurada y design thinking aplicados al PFC (formativa)\\
+Grupo & ACNN\\
+Integrantes & Arteaga Alava Danela Dayana, Chavarría Cuenca Tahiny Mel, Naranjo Alfonzo Anthony Alexander\\
+Docente & Gleiston Cicerón Guerrero Ulloa, PhD\\
+Sistema del PFC & Sistema de gestión para El Balcón Restaurant con IA\\
+Fecha de cierre & Sábado 21 de noviembre de 2026, 23:59\\
+Repositorio & \url{https://github.com/darteagaa-boop/ISR401-GrupoACNN}\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Guion de entrevista estructurada}
+\input{secciones/guion-apertura}
+\input{secciones/guion-bloques}
+\input{secciones/guion-cierre}
+
+\section{Protocolo de consentimiento informado}
+\input{secciones/consentimiento}
+
+\section{Ensayo de la entrevista}
+\input{secciones/ensayo}
+
+\section{Mapa de empatía}
+\input{secciones/mapa-empatia}
+
+\section{Definición del problema}
+\input{secciones/definicion-problema}
+
+\section{Ajustes al guion}
+\input{secciones/ajustes}
+
+\printbibliography[title={Referencias}]
+\end{document}
